@@ -473,6 +473,16 @@
   line-height: 1.8;
 }
 
+@media screen and (max-width: 900px) {
+  .events-column-text {
+    grid-column: 1 / -2;
+  }
+
+  .about-us-title-canvas {
+    display: none;
+  }
+}
+
 @keyframes hero-fade-in {
   from {
     opacity: 0.12;
