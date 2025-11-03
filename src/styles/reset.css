@@ -1,0 +1,274 @@
+/* Asterisks, Tags and pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  color-scheme: light dark;
+  tab-size: 4;
+  interpolate-size: allow-keywords;
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--ff-base);
+  font-size: var(--fz-base);
+  background-color: var(--bkg-clr);
+  color: var(--text-clr);
+  line-height: var(--ff-base-lh);
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd) {
+  margin-block-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: var(--ff-heading);
+  line-height: var(--ff-heading-lh);
+}
+
+:where(button, input, select, label, textarea) {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  border-radius: 5px;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: var(--ff-heading-lh);
+  padding: 0.25em 0.375em;
+}
+
+:where(input, select, textarea) {
+  display: block;
+  min-width: 28ch;
+  max-width: 100%;
+}
+
+:where(button),
+input[type="submit"] {
+  width: max-content;
+  cursor: pointer;
+  background-color: var(--extra-clr-1);
+  border-radius: 13px;
+}
+
+:where(button:hover) {
+  background-color: var(--extra-clr-2);
+}
+
+:where(button:active) {
+  background-color: var(--extra-clr-3);
+}
+
+iframe,
+img,
+input,
+select,
+textarea {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+img,
+picture {
+  display: block;
+}
+
+:where(textarea) {
+  resize: vertical;
+}
+
+:where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+:where(fieldset) {
+  border: none;
+  padding: 0;
+}
+
+:where(ul, ol, dl, menu) {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+span,
+li:not(.splide__slide),
+dd,
+figcaption {
+  /* This thing causes issues */
+  max-width: var(--body-max-width);
+  text-wrap: pretty;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+code {
+  font-family: var(--ff-code);
+  white-space: pre;
+}
+
+:where(a) {
+  text-decoration: none;
+  text-underline-offset: 5px;
+  color: inherit;
+  cursor: pointer;
+}
+
+:where(a:hover) {
+  opacity: 0.93;
+}
+
+:where(a:active) {
+  opacity: 0.85;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/* Attribute Selectors */
+td,
+math,
+time[datetime*=":"] {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+  min-width: unset;
+}
+
+:where(input[type="color"]) {
+  min-width: 50px;
+  min-height: 50px;
+  margin: 1rem;
+}
+
+:where(textarea:not([rows])) {
+  min-height: 5.5lh;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled="true"],
+[disabled] {
+  cursor: none;
+}
+
+[aria-hidden="false"][hidden] {
+  display: revert !important;
+}
+
+/* Pseudo-classes and Classes */
+:where(:first-child) {
+  margin-block-start: 0;
+}
+
+:where(:target) {
+  scroll-margin-block: 7.75rem;
+}
+
+.sr-only,
+.sr-only-focus,
+[aria-hidden="false"][hidden] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  pointer-events: none !important;
+}
+
+.sr-only-focus:focus,
+.sr-only-focus:active,
+[aria-hidden="false"][hidden]:focus,
+[aria-hidden="false"][hidden]:active {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: revert !important;
+  margin: revert !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  border: revert !important;
+  pointer-events: auto !important;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    --body-max-width: 100%;
+  }
+}

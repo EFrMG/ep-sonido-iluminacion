@@ -1,0 +1,151 @@
+#services-under-hero-para {
+  font-size: var(--fz-ms);
+  color: var(--primary-800);
+  animation: h2-para-in both var(--trs-l) 575ms;
+}
+
+.gallery-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 90vw), 1fr));
+  place-items: center;
+  gap: var(--spacing-l);
+  margin-block: var(--spacing-l) var(--spacing-xxl);
+  padding: var(--spacing-l) var(--spacing-m);
+}
+
+.card-anchor:active .gallery-card {
+  translate: 0 5px;
+}
+
+.gallery-card {
+  --s: 63px;
+  --c1: var(--secondary-200);
+  --c2: var(--secondary-300);
+  --c3: var(--secondary-400);
+
+  width: min(300px, 90vw);
+  background:
+    conic-gradient(
+        from 75deg,
+        var(--c1) 15deg,
+        var(--c2) 0 30deg,
+        #0000 0 180deg,
+        var(--c2) 0 195deg,
+        var(--c1) 0 210deg,
+        #0000 0
+      )
+      calc(var(--s) / 2) calc(0.5 * var(--s) / tan(30deg)),
+    conic-gradient(
+      var(--c1) 30deg,
+      var(--c3) 0 75deg,
+      var(--c1) 0 90deg,
+      var(--c2) 0 105deg,
+      var(--c3) 0 150deg,
+      var(--c2) 0 180deg,
+      var(--c3) 0 210deg,
+      var(--c1) 0 256deg,
+      var(--c2) 0 270deg,
+      var(--c1) 0 286deg,
+      var(--c2) 0 331deg,
+      var(--c3) 0
+    );
+  background-size: var(--s) calc(var(--s) / tan(30deg));
+  border: var(--border-width-m) dashed var(--primary-500);
+  border-radius: var(--radius-m);
+  box-shadow: var(--inner-shadow-1);
+  transition: translate var(--trs-back-in-out-short);
+}
+
+.card-animated-hover {
+  animation: card-hover 1900ms 500ms
+    linear(
+      0,
+      -0.004 4.8%,
+      -0.02 9.3%,
+      -0.124 26.1%,
+      -0.126 30.3%,
+      -0.104 33.9%,
+      -0.026 38.7%,
+      0.111 43.1%,
+      0.301 47%,
+      0.819 55.3%,
+      0.969 59.2%,
+      1.07 63.5%,
+      1.118 67.8%,
+      1.127 72.8%,
+      1.108 77.4%,
+      1.019 90.9%,
+      1.004 95.3%,
+      1
+    )
+    both;
+}
+
+.card-animated-hover-reverse {
+  animation: card-hover-reverse 1900ms
+    linear(
+      0,
+      -0.004 4.8%,
+      -0.02 9.3%,
+      -0.124 26.1%,
+      -0.126 30.3%,
+      -0.104 33.9%,
+      -0.026 38.7%,
+      0.111 43.1%,
+      0.301 47%,
+      0.819 55.3%,
+      0.969 59.2%,
+      1.07 63.5%,
+      1.118 67.8%,
+      1.127 72.8%,
+      1.108 77.4%,
+      1.019 90.9%,
+      1.004 95.3%,
+      1
+    )
+    both;
+}
+
+.card-title {
+  margin: var(--spacing-ms);
+  padding: var(--spacing-ml);
+  font-size: var(--fz-l);
+  text-align: center;
+  background-color: var(--secondary-50);
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+}
+
+.card-image-wrapper {
+  padding: var(--spacing-ms);
+  & img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border: var(--border-width-s) solid var(--primary-400);
+    border-radius: 0 0 var(--radius-m) var(--radius-m);
+  }
+}
+
+@keyframes card-hover {
+  0% {
+    transform: perspective(450px) scale(1) rotateX(0deg);
+  }
+  33% {
+    transform: perspective(450px) scale(1.03) rotateX(-1deg);
+  }
+  100% {
+    transform: perspective(450px) scale(1.017) rotateX(2.5deg);
+  }
+}
+
+@keyframes card-hover-reverse {
+  0% {
+    transform: perspective(450px) scale(1.017) rotateX(2.5deg);
+  }
+  66% {
+    transform: perspective(450px) scale(1.03) rotateX(-1deg);
+  }
+  100% {
+    transform: perspective(450px) scale(1) rotateX(0deg);
+  }
+}

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Erwin Francisco Macias Ghiglione" />
+    <meta
+      name="description"
+      content="Compañía de servicios de sonido e iluminación. Localidad: Argentina, provincia de Córdoba, Alcira Gigena. Más de 10 (diez) años de experiencia en el rubro."
+    />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>EP Sonido e Iluminación</title>
+    <link rel="preload" href="/src/fonts/Erode-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Erode-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/MerriweatherSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/MerriweatherSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/assets/images/logo-upscaled.png" as="image">
+  </head>
+  <body>
+    <header id="main-header" class="main-header">
+      <div class="skip-to-main" tabindex="0">
+        <a href="#main">Skip to main content</a>
+      </div>
+      <div class="main-header-inner-wrapper main-centering">
+        <nav class="main-nav nav-left">
+          <ul class="main-nav-inner-wrapper">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+          </ul>
+        </nav>
+
+        <div class="main-header-center-wrapper">
+          <a href="/">
+            <img id="main-logo-top" class="main-logo top" alt="Logo" height="64" width="64" />
+          </a>
+          <h1 class="main-title">
+            EP <span>Sonido</span> <span>Iluminación</span>
+          </h1>
+          <div class="main-title-motto-separator"></div>
+          <!-- ? I do wonder if the blockquote element would be more appropriate for a Motto quote -->
+          <!-- Probably not, as attribution is not needed.
+            The inline quote element still cannot be stand-alone -->
+          <p class="motto-quote top"><q>¿Qué más querés escuchar?</q></p>
+        </div>
+
+        <nav class="main-nav nav-right">
+          <ul class="main-nav-inner-wrapper">
+            <li class="list-item-gallery-anchor">
+              <div class="gallery-relative-menu">
+                <a
+                  id="trigger-gallery-menu"
+                  class="gallery-anchor"
+                  href="/galerias"
+                >
+                  <span class="gallery-anchor-text">Galerías</span>
+                  <div
+                    class="gallery-anchor-icon inline-icon"
+                    aria-hidden="true"
+                  ></div>
+                </a>
+                <menu id="gallery-menu" class="gallery-menu">
+                  <li><a href="/galerias/sonido">Sonido</a></li>
+                  <li>
+                    <a href="/galerias/iluminacion">Iluminación</a>
+                  </li>
+                  <li><a href="/galerias/eventos">Eventos</a></li>
+                </menu>
+              </div>
+            </li>
+            <li><a href="/calendario">Calendario</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu-wrapper">
+          <button
+            id="burger-menu-button"
+            aria-label="Open menu"
+            class="burger-menu-button"
+            aria-controls="mobile-nav-menu"
+            aria-expanded="false"
+          >
+            <svg
+              class="burger-menu-button-svg"
+              viewBox="0 0 100 100"
+              fill="var(--primary-650-shared)"
+            >
+              <rect
+                class="burger-rect top"
+                height="8"
+                width="90"
+                x="5"
+                y="20"
+                rx="4"
+              ></rect>
+              <rect
+                class="burger-rect middle"
+                height="8"
+                width="90"
+                x="5"
+                y="46"
+                rx="4"
+              ></rect>
+              <rect
+                class="burger-rect bottom"
+                height="8"
+                width="90"
+                x="5"
+                y="72"
+                rx="4"
+              ></rect>
+            </svg>
+          </button>
+
+          <nav id="mobile-nav-menu" class="mobile-nav-menu">
+            <menu>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+              <li><a href="/servicios">Servicios</a></li>
+              <li><a id="burger-gallery-anchor" href="/galerias">Galerías</a></li>
+              <li><a href="/calendario">Calendario</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+            </menu>
+          </nav>
+          <div class="main-burger-menu-foredrop"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main-main main-centering">
+      <hgroup class="global-h2-hgroup">
+        <div class="title-wrapper-for-underline">
+          <h2 class="global-h2">Iluminación</h2>
+          <div class="title-underline"></div>
+        </div>
+        <p>¡Nuestros efectos visuales!</p>
+      </hgroup>
+
+      <div class="carousel-wrapper">
+        <section class="splide" aria-label="Carrusel de Eventos">
+          <div class="splide__track">
+            <ul class="splide__list"></ul>
+          </div>
+        </section>
+      </div>
+
+      <a
+        class="main-whatsapp-anchor"
+        href="https://wa.me/5493585093051"
+        aria-label="Open WhatsApp"
+        target="_blank"
+      >
+        <div class="main-whatsapp-icon"></div>
+      </a>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer-inner-wrapper main-centering">
+        <address class="main-address">
+          <ul>
+            <li>
+              Teléfono: <a href="tel:3585093051">358-50-93-051</a>
+              <div
+                id="copy-icon-tel-wrapper"
+                class="copy-icon-wrapper inline-icon"
+                tabindex="0"
+              >
+                <div id="copy-icon-tel" class="copy-icon"></div>
+                <div class="copy-icon-tooltip-menu">
+                  <p id="copy-icon-tooltip-tel" class="copy-icon-tooltip-para">
+                    Copiar al Portapapeles
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              Email:
+              <a href="mailto:epsonido.macias@gmail.com"
+                >epsonido.macias@gmail.com</a
+              >
+              <div
+                id="copy-icon-email-wrapper"
+                class="copy-icon-wrapper inline-icon"
+                tabindex="0"
+              >
+                <div id="copy-icon-email" class="copy-icon"></div>
+                <div class="copy-icon-tooltip-menu">
+                  <p
+                    id="copy-icon-tooltip-email"
+                    class="copy-icon-tooltip-para"
+                  >
+                    Copiar al Portapapeles
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </address>
+        <div class="main-copyright">
+          <div class="upper-copyright-wrapper">
+            <p id="copyright-year">2025</p>
+            <div class="copyright-icon inline-icon"></div>
+            <p class="copyright-para-name">EP Sonido Iluminación.</p>
+          </div>
+          <p>Todos los derechos reservados.</p>
+        </div>
+        <div class="main-bottom-right">
+          <img
+            id="main-logo-bottom"
+            class="main-logo shake bottom"
+            alt="Logo"
+            height="86"
+            width="86"
+          />
+          <p id="motto-quote-bottom" class="motto-quote bottom">
+            <q>¿Qué más querés escuchar?</q>
+          </p>
+        </div>
+        <fieldset class="theme-fieldset">
+          <legend>Seleccionar tema</legend>
+          <label for="claro-th">
+            <input id="claro-th" type="radio" name="theme" value="light" />
+            <span>Claro</span>
+            <span class="theme-select-icon"></span>
+          </label>
+          <label for="oscuro-th">
+            <input id="oscuro-th" type="radio" name="theme" value="dark" />
+            <span>Oscuro</span>
+            <span class="theme-select-icon"></span>
+          </label>
+          <label for="sistema-th">
+            <input id="sistema-th" type="radio" name="theme" value="system" />
+            <span>Sistema</span>
+            <span class="theme-select-icon"></span>
+          </label>
+        </fieldset>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/scripts/iluminacion.js"></script>
+  </body>
+</html>

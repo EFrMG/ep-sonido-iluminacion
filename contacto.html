@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Erwin Francisco Macias Ghiglione" />
+    <meta
+      name="description"
+      content="Compañía de servicios de sonido e iluminación. Localidad: Argentina, provincia de Córdoba, Alcira Gigena. Más de 10 (diez) años de experiencia en el rubro."
+    />
+    <meta name="color-scheme" content="light dark" />
+
+    <title>EP Sonido e Iluminación</title>
+    <link rel="preload" href="/src/fonts/Erode-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Erode-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/MerriweatherSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/MerriweatherSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/assets/images/logo-upscaled.png" as="image">
+  </head>
+  <body>
+    <header id="main-header" class="main-header">
+      <div class="skip-to-main" tabindex="0">
+        <a href="#main">Skip to main content</a>
+      </div>
+      <div class="main-header-inner-wrapper main-centering">
+        <nav class="main-nav nav-left">
+          <ul class="main-nav-inner-wrapper">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+          </ul>
+        </nav>
+
+        <div class="main-header-center-wrapper">
+          <a href="/">
+            <img
+              id="main-logo-top"
+              class="main-logo top"
+              alt="Logo"
+              height="64"
+              width="64"
+            />
+          </a>
+          <h1 class="main-title">
+            EP <span>Sonido</span> <span>Iluminación</span>
+          </h1>
+          <div class="main-title-motto-separator"></div>
+          <!-- ? I do wonder if the blockquote element would be more appropriate for a Motto quote -->
+          <!-- Probably not, as attribution is not needed.
+            The inline quote element still cannot be stand-alone -->
+          <p class="motto-quote top"><q>¿Qué más querés escuchar?</q></p>
+        </div>
+
+        <nav class="main-nav nav-right">
+          <ul class="main-nav-inner-wrapper">
+            <li class="list-item-gallery-anchor">
+              <div class="gallery-relative-menu">
+                <a
+                  id="trigger-gallery-menu"
+                  class="gallery-anchor"
+                  href="/galerias"
+                >
+                  <span class="gallery-anchor-text">Galerías</span>
+                  <div
+                    class="gallery-anchor-icon inline-icon"
+                    aria-hidden="true"
+                  ></div>
+                </a>
+                <menu id="gallery-menu" class="gallery-menu">
+                  <li><a href="/galerias/sonido">Sonido</a></li>
+                  <li>
+                    <a href="/galerias/iluminacion">Iluminación</a>
+                  </li>
+                  <li><a href="/galerias/eventos">Eventos</a></li>
+                </menu>
+              </div>
+            </li>
+            <li><a href="/calendario">Calendario</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu-wrapper">
+          <button
+            id="burger-menu-button"
+            aria-label="Open menu"
+            class="burger-menu-button"
+            aria-controls="mobile-nav-menu"
+            aria-expanded="false"
+          >
+            <svg
+              class="burger-menu-button-svg"
+              viewBox="0 0 100 100"
+              fill="var(--primary-650-shared)"
+            >
+              <rect
+                class="burger-rect top"
+                height="8"
+                width="90"
+                x="5"
+                y="20"
+                rx="4"
+              ></rect>
+              <rect
+                class="burger-rect middle"
+                height="8"
+                width="90"
+                x="5"
+                y="46"
+                rx="4"
+              ></rect>
+              <rect
+                class="burger-rect bottom"
+                height="8"
+                width="90"
+                x="5"
+                y="72"
+                rx="4"
+              ></rect>
+            </svg>
+          </button>
+
+          <nav id="mobile-nav-menu" class="mobile-nav-menu">
+            <menu>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+              <li><a href="/servicios">Servicios</a></li>
+              <li>
+                <a id="burger-gallery-anchor" href="/galerias">Galerías</a>
+              </li>
+              <li><a href="/calendario">Calendario</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+            </menu>
+          </nav>
+          <div class="main-burger-menu-foredrop"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main-main main-centering">
+      <hgroup class="global-h2-hgroup">
+        <div class="title-wrapper-for-underline">
+          <h2 class="global-h2">Formulario de Contacto</h2>
+          <div class="title-underline"></div>
+        </div>
+        <p>
+          Su información se enviará por correo electrónico de manera práctica,
+          segura y automática.
+        </p>
+      </hgroup>
+
+      <div class="contact-main">
+        <section class="contact-form-wrapper">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/mnnoveob"
+            method="post"
+          >
+            <fieldset class="contact-important-fieldset">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="Nombre" required />
+
+              <label for="email">Dirección de correo electrónico:</label>
+              <input type="email" id="email" name="email" />
+              <p class="and-or-para">y / o</p>
+              <label for="phone">Número de teléfono:</label>
+              <input type="tel" id="phone" name="Teléfono" />
+
+              <label for="subject">Asunto:</label>
+              <input type="text" id="subject" name="Motivo" />
+
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="Mensaje" required></textarea>
+            </fieldset>
+
+            <fieldset class="contact-extra-fieldset">
+              <label for="date-calendar"
+                >Fecha y hora estimada del evento:</label
+              >
+              <input
+                type="datetime-local"
+                name="Fecha y hora"
+                id="date-calendar"
+              />
+
+              <label for="size"
+                >Tamaño del evento (número de asistentes):</label
+              >
+              <select name="Tamaño" id="size">
+                <option value="">N/A</option>
+                <optgroup label="S">
+                  <option value="Reducido: 50 a 200">
+                    De 50 a 200 personas
+                  </option>
+                </optgroup>
+                <optgroup label="M">
+                  <option value="Mediano: 200 a 500">
+                    De 200 a 500 personas
+                  </option>
+                </optgroup>
+                <optgroup label="L">
+                  <option value="Grande: 500 a 1.000">
+                    De 500 a 1.000 personas
+                  </option>
+                </optgroup>
+                <optgroup label="XL">
+                  <option value="Muy grande: Más de 1.000">
+                    Más de 1.000 personas
+                  </option>
+                </optgroup>
+              </select>
+
+              <p class="checkboxes-description">Servicios requeridos:</p>
+              <div class="checkbox-wrapper">
+                <div class="checkboxes">
+                  <input
+                    type="checkbox"
+                    name="Servicios"
+                    value="Instrumentos"
+                    id="instruments"
+                  />
+                  <label for="instruments">Instrumentos</label>
+                </div>
+                <div class="checkboxes">
+                  <input
+                    type="checkbox"
+                    name="Servicios"
+                    value="Iluminación"
+                    id="lighting"
+                  />
+                  <label for="lighting">Iluminación</label>
+                </div>
+                <div class="checkboxes">
+                  <input
+                    type="checkbox"
+                    name="Servicios"
+                    value="Voces y locución"
+                    id="voices"
+                  />
+                  <label for="voices">Voces y locución</label>
+                </div>
+              </div>
+
+              <label for="location">Lugar del evento:</label>
+              <input type="text" name="Locación" id="location" />
+            </fieldset>
+
+            <div class="form-buttons-wrapper">
+              <!-- From Uiverse.io by cssbuttons-io -->
+              <button id="extra-button" class="form-button extra fv-button">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Información extra </span>
+              </button>
+
+              <div class="loader"></div>
+
+              <button
+                type="submit"
+                id="submit-button"
+                class="form-button submit fv-button"
+              >
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Enviar </span>
+              </button>
+            </div>
+          </form>
+
+          <dialog id="form-modal" class="form-modal" closedby="any">
+            <button id="form-modal-button" autofocus>&times;</button>
+            <p>Sus datos se han enviado correctamente. Muchas gracias.</p>
+          </dialog>
+        </section>
+
+        <aside class="contact-aside">
+          <p class="where-para">¿Dónde estamos?</p>
+          <div class="map-embed-wrapper">
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26843.36135116304!2d-64.37598785890727!3d-32.75458396035207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd8a817cc78357%3A0xcaafc7c8c023cd79!2sAlcira%20Gigena%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1761218217663!5m2!1ses-419!2sar"
+              height="350"
+              width="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <p class="clear-para">Alcira Gigena, Córdoba, Argentina.</p>
+        </aside>
+      </div>
+
+      <div class="dev-contact">
+        <p>
+          Por cualquier consulta técnica o contrato:
+          <a
+            href="mailto:macias.francisco.355237995@gmail.com?body=Quisiera%20contactarme%2C%20desde%20la%20p%C3%A1gina%20de%20EP%20Sonido%20Iluminaci%C3%B3n%2C%20con%20el%20desarrollador%20del%20sito%20web%20por%20el%2Flos%20motivo%2Fs%20siguiente%2Fs%3A%0A"
+            >Consulte al desarrollador del sitio</a
+          >.
+        </p>
+      </div>
+
+      <a
+        class="main-whatsapp-anchor"
+        href="https://wa.me/5493585093051"
+        aria-label="Open WhatsApp"
+        target="_blank"
+      >
+        <div class="main-whatsapp-icon"></div>
+      </a>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer-inner-wrapper main-centering">
+        <address class="main-address">
+          <ul>
+            <li>
+              Teléfono: <a href="tel:3585093051">358-50-93-051</a>
+              <div
+                id="copy-icon-tel-wrapper"
+                class="copy-icon-wrapper inline-icon"
+                tabindex="0"
+              >
+                <div id="copy-icon-tel" class="copy-icon"></div>
+                <div class="copy-icon-tooltip-menu">
+                  <p id="copy-icon-tooltip-tel" class="copy-icon-tooltip-para">
+                    Copiar al Portapapeles
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              Email:
+              <a href="mailto:epsonido.macias@gmail.com"
+                >epsonido.macias@gmail.com</a
+              >
+              <div
+                id="copy-icon-email-wrapper"
+                class="copy-icon-wrapper inline-icon"
+                tabindex="0"
+              >
+                <div id="copy-icon-email" class="copy-icon"></div>
+                <div class="copy-icon-tooltip-menu">
+                  <p
+                    id="copy-icon-tooltip-email"
+                    class="copy-icon-tooltip-para"
+                  >
+                    Copiar al Portapapeles
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </address>
+        <div class="main-copyright">
+          <div class="upper-copyright-wrapper">
+            <p id="copyright-year">2025</p>
+            <div class="copyright-icon inline-icon"></div>
+            <p class="copyright-para-name">EP Sonido Iluminación.</p>
+          </div>
+          <p>Todos los derechos reservados.</p>
+        </div>
+        <div class="main-bottom-right">
+          <img
+            id="main-logo-bottom"
+            class="main-logo shake bottom"
+            alt="Logo"
+            height="86"
+            width="86"
+          />
+          <p id="motto-quote-bottom" class="motto-quote bottom">
+            <q>¿Qué más querés escuchar?</q>
+          </p>
+        </div>
+        <fieldset class="theme-fieldset">
+          <legend>Seleccionar tema</legend>
+          <label for="claro-th">
+            <input id="claro-th" type="radio" name="theme" value="light" />
+            <span>Claro</span>
+            <span class="theme-select-icon"></span>
+          </label>
+          <label for="oscuro-th">
+            <input id="oscuro-th" type="radio" name="theme" value="dark" />
+            <span>Oscuro</span>
+            <span class="theme-select-icon"></span>
+          </label>
+          <label for="sistema-th">
+            <input id="sistema-th" type="radio" name="theme" value="system" />
+            <span>Sistema</span>
+            <span class="theme-select-icon"></span>
+          </label>
+        </fieldset>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/scripts/contacto.js"></script>
+  </body>
+</html>

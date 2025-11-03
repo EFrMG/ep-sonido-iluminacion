@@ -1,0 +1,135 @@
+/**
+* @license
+*
+* Font Family: Erode
+* Designed by: Nikhil Ranganathan
+* URL: https://www.fontshare.com/fonts/erode
+* © 2025 Indian Type Foundry
+*
+* Erode Variable (Variable font)
+
+*
+*/
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 300.0;
+*
+* available axes:
+'wght' (range from 300.0 to 700.0
+*/
+@font-face {
+  font-family: "Erode-Variable";
+  src:
+    url("../fonts/Erode-Variable.woff2") format("woff2"),
+    url("../fonts/Erode-Variable.woff") format("woff");
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* @license
+*
+* Font Family: Erode
+* Designed by: Nikhil Ranganathan
+* URL: https://www.fontshare.com/fonts/erode
+* © 2025 Indian Type Foundry
+*
+* Erode Regular
+
+*
+*/
+@font-face {
+  font-family: "Erode-Regular";
+  src:
+    url("../fonts/Erode-Regular.woff2") format("woff2"),
+    url("../fonts/Erode-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2025 Indian Type Foundry
+*
+* Satoshi Regular
+* Satoshi Italic
+* Satoshi Medium
+* Satoshi Bold
+
+*
+*/
+@font-face {
+  font-family: "Satoshi-Regular";
+  src:
+    url("../fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("../fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Italic";
+  src:
+    url("../fonts/Satoshi-Italic.woff2") format("woff2"),
+    url("../fonts/Satoshi-Italic.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+  src:
+    url("../fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("../fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Bold";
+  src:
+    url("../fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("../fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* @license
+*
+* Font Family: Merriweather Sans
+* Designed by: Eben Sorkin, Sorkin Type
+* URL: https://www.fontshare.com/fonts/merriweather-sans
+* © 2025 Indian Type Foundry
+*
+* Merriweather Sans Regular
+* Merriweather Sans SemiBold
+
+*
+*/
+@font-face {
+  font-family: "MerriweatherSans-Regular";
+  src:
+    url("../fonts/MerriweatherSans-Regular.woff2") format("woff2"),
+    url("../fonts/MerriweatherSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MerriweatherSans-SemiBold";
+  src:
+    url("../fonts/MerriweatherSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/MerriweatherSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
