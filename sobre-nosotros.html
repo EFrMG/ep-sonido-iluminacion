@@ -67,11 +67,7 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <link
-      rel="preload"
-      href="/src/assets/images/logo-upscaled.png"
-      as="image" crossorigin="anonymous"
-    />
+    <script type="module" src="/src/scripts/preload.js"></script>
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -196,9 +192,15 @@
               </li>
               <li><a href="/ep-sonido-iluminacion/servicios">Servicios</a></li>
               <li>
-                <a id="burger-gallery-anchor" href="/ep-sonido-iluminacion/galerias">Galerías</a>
+                <a
+                  id="burger-gallery-anchor"
+                  href="/ep-sonido-iluminacion/galerias"
+                  >Galerías</a
+                >
               </li>
-              <li><a href="/ep-sonido-iluminacion/calendario">Calendario</a></li>
+              <li>
+                <a href="/ep-sonido-iluminacion/calendario">Calendario</a>
+              </li>
               <li><a href="/ep-sonido-iluminacion/contacto">Contacto</a></li>
             </menu>
           </nav>
@@ -263,7 +265,10 @@
           su evento.
         </p>
         <div class="about-cta-button-wrapper">
-          <a href="/ep-sonido-iluminacion/contacto" class="about-cta-button fv-button">
+          <a
+            href="/ep-sonido-iluminacion/contacto"
+            class="about-cta-button fv-button"
+          >
             Contacto
             <span class="about-cta-button-arrow inline-icon" aria-hidden="true"
               >&rarr;</span

@@ -1,5 +1,3 @@
-import mainLogo from "../assets/images/logo-upscaled.png";
-
 // Copyright year
 const copyrightYear = document.getElementById("copyright-year");
 

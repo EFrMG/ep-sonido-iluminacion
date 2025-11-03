@@ -67,13 +67,39 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <link
-      rel="preload"
-      href="/src/assets/images/logo-upscaled.png"
-      as="image" crossorigin="anonymous"
+    <script type="module" src="/src/scripts/preload.js"></script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ilovelovethis.github.io/ep-sonido-iluminacion/"
     />
-    <link rel="preload" href="/src/assets/images/texture_1.webp" as="image" crossorigin="anonymous" />
-    <link rel="preload" href="/src/assets/images/texture_2.png" as="image" crossorigin="anonymous" />
+    <meta property="og:title" content="EP Sonido e Iluminación" />
+    <meta
+      property="og:description"
+      content="Compañía de servicios de sonido e iluminación. Localidad: Argentina, provincia de Córdoba, Alcira Gigena. Más de 10 (diez) años de experiencia en el rubro."
+    />
+    <meta
+      property="og:image"
+      content="https://ilovelovethis.github.io/ep-sonido-iluminacion/images/logo.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta
+      property="twitter:url"
+      content="https://ilovelovethis.github.io/ep-sonido-iluminacion/"
+    />
+    <meta property="twitter:title" content="EP Sonido e Iluminación" />
+    <meta
+      property="twitter:description"
+      content="Compañía de servicios de sonido e iluminación. Localidad: Argentina, provincia de Córdoba, Alcira Gigena. Más de 10 (diez) años de experiencia en el rubro."
+    />
+    <meta
+      property="twitter:image"
+      content="https://ilovelovethis.github.io/ep-sonido-iluminacion/images/logo.png"
+    />
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -84,7 +110,9 @@
         <nav class="main-nav nav-left">
           <ul class="main-nav-inner-wrapper">
             <li><a href="/ep-sonido-iluminacion/">Inicio</a></li>
-            <li><a href="/ep-sonido-iluminacion/sobre-nosotros">Sobre Nosotros</a></li>
+            <li>
+              <a href="/ep-sonido-iluminacion/sobre-nosotros">Sobre Nosotros</a>
+            </li>
             <li><a href="/ep-sonido-iluminacion/servicios">Servicios</a></li>
           </ul>
         </nav>
@@ -125,11 +153,19 @@
                   ></div>
                 </a>
                 <menu id="gallery-menu" class="gallery-menu">
-                  <li><a href="/ep-sonido-iluminacion/galerias/sonido">Sonido</a></li>
                   <li>
-                    <a href="/ep-sonido-iluminacion/galerias/iluminacion">Iluminación</a>
+                    <a href="/ep-sonido-iluminacion/galerias/sonido">Sonido</a>
                   </li>
-                  <li><a href="/ep-sonido-iluminacion/galerias/eventos">Eventos</a></li>
+                  <li>
+                    <a href="/ep-sonido-iluminacion/galerias/iluminacion"
+                      >Iluminación</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/ep-sonido-iluminacion/galerias/eventos"
+                      >Eventos</a
+                    >
+                  </li>
                 </menu>
               </div>
             </li>
@@ -181,12 +217,22 @@
           <nav id="mobile-nav-menu" class="mobile-nav-menu">
             <menu>
               <li><a href="/ep-sonido-iluminacion/">Inicio</a></li>
-              <li><a href="/ep-sonido-iluminacion/sobre-nosotros">Sobre Nosotros</a></li>
+              <li>
+                <a href="/ep-sonido-iluminacion/sobre-nosotros"
+                  >Sobre Nosotros</a
+                >
+              </li>
               <li><a href="/ep-sonido-iluminacion/servicios">Servicios</a></li>
               <li>
-                <a id="burger-gallery-anchor" href="/ep-sonido-iluminacion/galerias">Galerías</a>
+                <a
+                  id="burger-gallery-anchor"
+                  href="/ep-sonido-iluminacion/galerias"
+                  >Galerías</a
+                >
               </li>
-              <li><a href="/ep-sonido-iluminacion/calendario">Calendario</a></li>
+              <li>
+                <a href="/ep-sonido-iluminacion/calendario">Calendario</a>
+              </li>
               <li><a href="/ep-sonido-iluminacion/contacto">Contacto</a></li>
             </menu>
           </nav>
@@ -206,7 +252,10 @@
           </p>
           <div class="hero-cta-buttons">
             <div class="about-cta-button-wrapper">
-              <a href="/ep-sonido-iluminacion/contacto" class="about-cta-button fv-button">
+              <a
+                href="/ep-sonido-iluminacion/contacto"
+                class="about-cta-button fv-button"
+              >
                 Contacto
                 <span
                   class="about-cta-button-arrow inline-icon"
@@ -217,7 +266,10 @@
             </div>
 
             <div class="services-cta-button-wrapper">
-              <a class="services-cta-button" href="/ep-sonido-iluminacion/servicios">
+              <a
+                class="services-cta-button"
+                href="/ep-sonido-iluminacion/servicios"
+              >
                 Ver Servicios
                 <span
                   class="about-cta-button-arrow icon inline-icon"
@@ -297,7 +349,10 @@
         </p>
 
         <div class="services-cta-button-wrapper">
-          <a class="services-cta-button" href="/ep-sonido-iluminacion/servicios">
+          <a
+            class="services-cta-button"
+            href="/ep-sonido-iluminacion/servicios"
+          >
             Ver Servicios
             <span
               class="about-cta-button-arrow icon inline-icon"
