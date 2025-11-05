@@ -143,7 +143,7 @@ span,
 li:not(.splide__slide),
 dd,
 figcaption {
-  /* This thing causes issues */
+  /* This one could cause issues */
   max-width: var(--body-max-width);
   text-wrap: pretty;
 }
