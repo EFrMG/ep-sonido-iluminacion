@@ -59,11 +59,8 @@
     font-family: var(--ff-italics);
     font-style: italic;
     text-decoration: underline;
+    text-decoration-style: dashed;
     text-decoration-color: var(--accent-301-shared);
-  }
-
-  & span:last-of-type {
-    font-family: var(--ff-extra);
   }
 }
 

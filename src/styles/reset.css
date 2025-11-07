@@ -104,6 +104,10 @@ input[type="submit"] {
   background-color: var(--extra-clr-3);
 }
 
+:where(dialog) {
+  color: unset;
+}
+
 iframe,
 img,
 input,

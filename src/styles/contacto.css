@@ -85,14 +85,18 @@
   & label[for="name"]::after,
   & label[for="message"]::after {
     content: "*";
-    padding-inline-start: 1.1ex;
+    vertical-align: middle;
+    padding-inline-start: 1ex;
+    font-size: var(--fz-l);
     color: var(--primary-601-shared);
   }
 
   & label[for="phone"]::after,
   & label[for="email"]::after {
     content: "*";
-    padding-inline-start: 1.1ex;
+    vertical-align: middle;
+    padding-inline-start: 1ex;
+    font-size: var(--fz-l);
     color: var(--primary-601-shared);
   }
 }
@@ -324,6 +328,7 @@
 .loader {
   display: none;
   opacity: 0;
+  max-width: 50%;
   height: 5px;
   flex: 1 0 0%;
   --c: no-repeat linear-gradient(var(--accent-500) 0 0);
@@ -331,6 +336,10 @@
   background-size: 60% 100%;
   transition: opacity 170ms;
   animation: loader-fill 3.3s infinite;
+
+  &.dev {
+    margin-inline-start: var(--spacing-m);
+  }
 }
 
 .loader.shown {
@@ -395,6 +404,106 @@
   & button {
     outline-color: hsl(0, 65%, 50%);
   }
+}
+
+/* Dev form specific */
+.contact-form-modal {
+  --modal-opacity: 1;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  max-width: 90vw;
+  max-height: 90dvh;
+  padding: var(--spacing-ml);
+  border: var(--border-width-m) solid var(--secondary-300);
+  border-radius: var(--radius-m) 0 0 var(--radius-m);
+  background-color: var(--secondary-100);
+  box-shadow: 0px 3px 50px -10px hsl(var(--shadow-color));
+  z-index: 100;
+  overflow: auto;
+  opacity: var(--modal-opacity);
+
+  transition: opacity var(--trs-l) 350ms;
+}
+
+.contact-form-modal[open] {
+  opacity: var(--modal-opacity);
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.contact-form-modal::backdrop {
+  background: hsl(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(0.7px) saturate(0.5);
+  transition:
+    backdrop-filter var(--trs-l) 350ms,
+    opacity var(--trs-l);
+  opacity: var(--modal-opacity);
+
+  @starting-style {
+    opacity: 0;
+    backdrop-filter: blur(0px) saturate(1);
+  }
+}
+
+#close-dev-modal-button {
+  position: absolute;
+  inset: var(--spacing-s) var(--spacing-s) auto auto;
+  border: none;
+  border-radius: var(--radius-m) 0 var(--radius-m) var(--radius-m);
+  outline: var(--border-width-m) solid var(--secondary-300);
+  box-shadow: var(--inner-shadow-1);
+  font-size: var(--fz-l);
+  line-height: 1;
+  background-color: var(--secondary-100);
+  cursor: pointer;
+  transition: background-color var(--trs-s);
+}
+
+#dev-contact-form {
+  max-width: 58ch;
+  border-radius: var(--radius-m);
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dev-notice-para {
+  margin-block: var(--spacing-xl) var(--spacing-ms);
+  font-family: var(--ff-extra);
+  font-size: var(--fz-ml);
+  text-align: center;
+  opacity: 0.83;
+
+  & span {
+    font-family: var(--ff-extra-bold);
+  }
+}
+
+.dev-form-hr {
+  width: 94%;
+  margin-block-end: var(--spacing-ml);
+  border-color: var(--secondary-300);
+}
+
+.contact-important-fieldset {
+  & label[for="dev-name"]::after,
+  & label[for="dev-email"]::after,
+  & label[for="dev-message"]::after {
+    content: "*";
+    vertical-align: middle;
+    padding-inline-start: 1ex;
+    font-size: var(--fz-l);
+    color: var(--primary-601-shared);
+  }
+}
+
+#dev-submit-button {
+  margin-inline-start: auto;
 }
 
 @media screen and (max-width: 1000px) {

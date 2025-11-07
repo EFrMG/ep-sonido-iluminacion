@@ -107,12 +107,18 @@
 }
 
 .card-title {
+  position: relative;
   margin: var(--spacing-ms);
   padding: var(--spacing-ml);
   font-size: var(--fz-l);
   text-align: center;
-  background-color: var(--secondary-50);
+  background-image: linear-gradient(var(--secondary-50) 83%, transparent);
   border-radius: var(--radius-m) var(--radius-m) 0 0;
+
+  & span {
+    display: inline-block;
+    translate: 0 -0.25em;
+  }
 }
 
 .card-image-wrapper {

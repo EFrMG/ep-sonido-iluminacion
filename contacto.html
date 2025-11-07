@@ -229,6 +229,7 @@
 
       <div class="contact-main">
         <section class="contact-form-wrapper">
+          <!-- EPSI form -->
           <form
             id="contact-form"
             class="contact-form"
@@ -366,6 +367,77 @@
             <button id="form-modal-button" autofocus>&times;</button>
             <p>Sus datos se han enviado correctamente. Muchas gracias.</p>
           </dialog>
+
+          <!-- Dev form -->
+          <dialog
+            id="dev-contact-dialog"
+            class="contact-form-modal"
+            closedby="any"
+          >
+            <form
+              id="dev-contact-form"
+              class="contact-form"
+              action="https://formspree.io/f/myzbrazq"
+              method="post"
+            >
+              <button id="close-dev-modal-button" autofocus>&times;</button>
+
+              <p class="dev-notice-para">
+                Formulario para contactar al
+                <span>desarrollador</span> del sitio web:
+              </p>
+
+              <hr class="dev-form-hr" />
+
+              <fieldset class="contact-important-fieldset">
+                <label for="dev-name">Nombre:</label>
+                <input
+                  type="text"
+                  id="dev-name"
+                  name="name"
+                  maxlength="50"
+                  required
+                />
+
+                <label for="dev-email">Dirección de correo electrónico:</label>
+                <input
+                  type="email"
+                  id="dev-email"
+                  name="email"
+                  maxlength="120"
+                  required
+                />
+
+                <label for="dev-message">Mensaje:</label>
+                <textarea
+                  id="dev-message"
+                  name="message"
+                  maxlength="1200"
+                  required
+                ></textarea>
+              </fieldset>
+
+              <div class="form-buttons-wrapper">
+                <!-- From Uiverse.io by cssbuttons-io -->
+                <div class="loader dev"></div>
+
+                <button
+                  type="submit"
+                  id="dev-submit-button"
+                  class="form-button submit fv-button"
+                >
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front text"> Enviar </span>
+                </button>
+              </div>
+            </form>
+          </dialog>
+
+          <dialog id="dev-form-modal" class="form-modal" closedby="any">
+            <button id="dev-form-modal-button" autofocus>&times;</button>
+            <p>Gracias por contactarme. Le responderé en la brevedad.</p>
+          </dialog>
         </section>
 
         <aside class="contact-aside">
@@ -389,9 +461,7 @@
       <div class="dev-contact">
         <p>
           Por cualquier consulta:
-          <a
-            href="mailto:macias.francisco.355237995@gmail.com?body=Quisiera%20contactarme%2C%20desde%20la%20p%C3%A1gina%20de%20EP%20Sonido%20Iluminaci%C3%B3n%2C%20con%20el%20desarrollador%20del%20sito%20web%20por%20el%2Flos%20motivo%2Fs%20siguiente%2Fs%3A%0A"
-            >Contacte al desarrollador de este sitio web</a
+          <a id="open-dev-modal">Contacte al desarrollador de este sitio web</a
           >.
         </p>
       </div>

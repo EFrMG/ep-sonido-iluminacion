@@ -120,6 +120,7 @@
 
 .h3-icon {
   display: flex;
+  align-items: center;
   gap: var(--spacing-ml);
   margin-inline-end: var(--spacing-l);
 }

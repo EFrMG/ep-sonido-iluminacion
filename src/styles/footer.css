@@ -312,6 +312,12 @@ body.light-theme #sistema-th {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .main-copyright {
+    order: 1;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .theme-fieldset {
     inset: auto 10px 103% 10px;
