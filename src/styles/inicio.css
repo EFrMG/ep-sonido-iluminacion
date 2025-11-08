@@ -1,4 +1,6 @@
 .hero-section {
+  position: relative;
+  isolation: isolate; /* Important for the "z-index: -1" later */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,11 +8,9 @@
   padding: var(--spacing-xl) var(--spacing-l);
   text-align: center;
   background-blend-mode: hard-light;
-  background-size: cover;
   background-position: center;
   min-height: 65dvh;
   border-radius: var(--radius-xl);
-  position: relative;
   background:
     radial-gradient(
       ellipse at 50% 50%,
@@ -19,8 +19,34 @@
       hsla(224, 33%, 10%, 0.8) 70%,
       hsl(222, 33%, 10%) 100%
     ),
-    url("../assets/images/texture_1.webp");
+    center / cover no-repeat url("../assets/images/LQ-texture_1.webp");
 
+  /* High-quality image fade-in layer */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1; /* Behind content, in front of background */
+    border-radius: inherit;
+    background-blend-mode: hard-light;
+    background:
+      radial-gradient(
+        ellipse at 50% 50%,
+        hsla(224, 33%, 40%, 0.69) 0%,
+        hsla(224, 33%, 30%, 0.75) 35%,
+        hsla(224, 33%, 10%, 0.8) 70%,
+        hsl(222, 33%, 10%) 100%
+      ),
+      center / cover no-repeat url("../assets/images/texture_1.webp");
+    opacity: 0;
+    transition: opacity var(--trs-out-long);
+  }
+
+  &.loaded::before {
+    opacity: 1;
+  }
+
+  /* Inner box-shadow layer */
   &::after {
     content: "";
     position: absolute;
@@ -142,9 +168,9 @@
   height: 100%;
   width: 100%;
   background-color: hsl(0, 0%, 0%, 0.9);
-  mask: url("../assets/images/texture_2.webp") center / 64px 64px repeat;
+  mask: url("../assets/images/texture_2.webp") center / 32px 32px repeat;
   mask-mode: alpha;
-  opacity: 0.33;
+  opacity: 0.53;
   z-index: 2;
 }
 

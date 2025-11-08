@@ -1,12 +1,22 @@
 import "../styles/styles.css";
 import "./globals.js";
 import "../styles/inicio.css";
+import texture_1 from "../assets/images/texture_1.webp";
 import harp_08 from "../audio/harp_08.mp3";
 import harp_13 from "../audio/harp_13.mp3";
 
 import { aboutCtaButtonHandling } from "./utils.js";
 
 aboutCtaButtonHandling();
+
+// LQPI swap
+const heroSection = document.querySelector(".hero-section");
+const tempImg = new Image();
+
+tempImg.src = texture_1;
+tempImg.onload = () => {
+  heroSection.classList.add("loaded");
+};
 
 const servicesCtaButton = document.querySelectorAll(".services-cta-button");
 

@@ -474,7 +474,6 @@
 
   & a {
     font-family: var(--ff-extra-bold);
-    font-style: normal;
     text-decoration: underline;
     text-decoration-color: var(--accent-301-shared);
     transition: text-decoration-color var(--trs-s);
