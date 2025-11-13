@@ -13,10 +13,13 @@ async function initCarousel() {
       query: "?url",
       import: "default",
     });
-    const videoModules = import.meta.glob("../assets/videos/event_*.webm", {
-      query: "?url",
-      import: "default",
-    });
+    const videoModules = import.meta.glob(
+      "../assets/videos/event_*.{webm,mp4}",
+      {
+        query: "?url",
+        import: "default",
+      },
+    );
 
     const imageEntries = Object.entries(imageModules);
     const videoEntries = Object.entries(videoModules);
@@ -50,7 +53,7 @@ async function initCarousel() {
       const slide = document.createElement("li");
       slide.classList.add("splide__slide");
 
-      const isVideo = url.endsWith(".webm");
+      const isVideo = url.endsWith(".webm") || url.endsWith(".mp4");
 
       if (isVideo) {
         const videoEl = document.createElement("video");
@@ -74,6 +77,7 @@ async function initCarousel() {
     // Init Splide
     const splide = new Splide(".splide", {
       type: "fade",
+      drag: false,
       rewind: true,
       speed: 700,
       height: "100%",

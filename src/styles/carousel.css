@@ -93,5 +93,7 @@
 
   .splide__arrow {
     opacity: 0.36 !important;
+    height: 1.75em;
+    width: 1.75em;
   }
 }

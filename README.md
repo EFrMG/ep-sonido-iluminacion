@@ -22,6 +22,8 @@ There are 9 different pages in this multi-page application which include many th
 
 - Contact form with extra details option
 
+- Menu picker for Light, Dark and System color themes.
+
 - I have also set up a sort of _Easter egg_ for the client who loves guitar: An underlined title that is grabbed by the mouse pointer and once "released" or "plucked" two different harp sounds play (which are a major third interval).
 
 ---
