@@ -2,8 +2,8 @@ import "../styles/styles.css";
 import "./globals.js";
 import "../styles/inicio.css";
 import texture_1 from "../assets/images/texture_1.webp";
-import harp_08 from "../audio/harp_08.mp3";
-import harp_13 from "../audio/harp_13.mp3";
+import harp_08 from "../assets/audios/harp_08.mp3";
+import harp_13 from "../assets/audios/harp_13.mp3";
 
 import { aboutCtaButtonHandling } from "./utils.js";
 
