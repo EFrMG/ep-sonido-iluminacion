@@ -245,14 +245,25 @@ class SingleUnderline {
 
   createUnderline() {
     const rect = this.element.getBoundingClientRect();
+    const text = this.element.textContent.trim();
+    const textMetrics = this.ctx.measureText(text);
+
+    // Add padding to extend the underline.
+    // The canvas will not measure text precisely and as it is it is better to have it fall short given text styles
+    // than to extend past at times given display style of the title element rendering late
+    const padding = 29;
+    const textWidth = textMetrics.width / this.ratio + padding;
+
+    const startX = (rect.width - textWidth) / 2;
+    const endX = startX + textWidth;
 
     const strokeWidth = Math.max(1.5, window.devicePixelRatio);
     const underlineY = rect.height * 0.85;
 
     this.string = new GuitarString(
       this.ctx,
-      { x: 0, y: underlineY },
-      { x: rect.width, y: underlineY },
+      { x: startX, y: underlineY },
+      { x: endX, y: underlineY },
       strokeWidth,
       "gray",
       this.ratio,

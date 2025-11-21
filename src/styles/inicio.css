@@ -563,10 +563,12 @@
   from {
     opacity: 0.12;
     scale: 0.5;
+    filter: blur(5px);
   }
   to {
     opacity: 1;
     scale: 1;
+    filter: blur(0px);
   }
 }
 
@@ -575,11 +577,13 @@
     opacity: 0;
     scale: 0.5;
     transform: rotateX(33deg) rotateY(19deg);
+    filter: blur(7px);
   }
   to {
     opacity: 1;
     scale: 1;
     transform: rotateX(0deg) rotateY(0deg);
+    filter: blur(0px);
   }
 }
 
@@ -588,11 +592,13 @@
     opacity: 0;
     scale: 0.5;
     rotate: y -55deg;
+    filter: blur(3px);
   }
   to {
     opacity: 1;
     scale: 1;
     rotate: y 0deg;
+    filter: blur(0px);
   }
 }
 
