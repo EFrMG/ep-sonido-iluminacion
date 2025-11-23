@@ -14,28 +14,28 @@ There are 9 different pages in this multi-page application which include many th
     <details>
       <summary>Video showcase (open)</summary>
       
-https://github.com/user-attachments/assets/e9c39d2d-0ef2-48f5-bf81-8f98eb0d4dce
+    https://github.com/user-attachments/assets/e9c39d2d-0ef2-48f5-bf81-8f98eb0d4dce
     </details>
 
 - Reasonably invested button hover animations
     <details>
       <summary>Video showcase (open)</summary>
       
-https://github.com/user-attachments/assets/3f047424-e1a8-4158-a569-9b2c67efc84f
+    https://github.com/user-attachments/assets/3f047424-e1a8-4158-a569-9b2c67efc84f
     </details>
     
 - 3D interactive transformation for "Service cards"
     <details>
       <summary>Video showcase (open)</summary>
       
-https://github.com/user-attachments/assets/9c8d5a68-ef75-4e84-9699-71db709dd3cc
+    https://github.com/user-attachments/assets/9c8d5a68-ef75-4e84-9699-71db709dd3cc
     </details>
 
 - Mouse-following conic gradients
     <details>
       <summary>Video showcase (open)</summary>
       
-https://github.com/user-attachments/assets/37c24ec1-9111-417d-9971-e7c01e2318b0
+    https://github.com/user-attachments/assets/37c24ec1-9111-417d-9971-e7c01e2318b0
     </details>
 
 - Carousels with about 80 images and 10 videos
@@ -50,5 +50,5 @@ https://github.com/user-attachments/assets/37c24ec1-9111-417d-9971-e7c01e2318b0
     <details>
       <summary>Video showcase (open)</summary>
       
-https://github.com/user-attachments/assets/bbcbfb3a-3af8-418e-bee9-288da3a977ba
+    https://github.com/user-attachments/assets/bbcbfb3a-3af8-418e-bee9-288da3a977ba
     </details>
