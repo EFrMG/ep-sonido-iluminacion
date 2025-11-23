@@ -1,6 +1,6 @@
 # EP Sonido Iluminación
 
-![Company logo](/public/big-logo.png)
+<img width="349" height="346" alt="big-logo" src="https://github.com/user-attachments/assets/82eb223a-e03f-4051-9571-3a5a0f3a4d94" />
 
 ## Brief
 
