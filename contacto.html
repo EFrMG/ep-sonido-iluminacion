@@ -247,7 +247,13 @@
               />
 
               <label for="email">Dirección de correo electrónico:</label>
-              <input type="email" id="email" name="email" maxlength="120" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                maxlength="120"
+              />
               <p class="and-or-para">y / o</p>
               <label for="phone">Número de teléfono:</label>
               <input type="tel" id="phone" name="Teléfono" maxlength="50" />
@@ -268,10 +274,11 @@
               <label for="date-calendar"
                 >Fecha y hora estimada del evento:</label
               >
+              <input type="datetime-local" id="date-calendar" />
               <input
-                type="datetime-local"
+                type="hidden"
                 name="Fecha y hora"
-                id="date-calendar"
+                id="date-calendar-formated"
               />
 
               <label for="size"
@@ -409,6 +416,7 @@
                   type="email"
                   id="dev-email"
                   name="email"
+                  autocomplete="email"
                   maxlength="120"
                   required
                 />

@@ -8,6 +8,17 @@ const emailInput = document.getElementById("email");
 const andOrPara = document.querySelector(".and-or-para");
 const phoneInput = document.getElementById("phone");
 const extraFieldset = document.querySelector(".contact-extra-fieldset");
+const dateToFormatEl = document.getElementById("date-calendar");
+const formatOptions = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: false,
+};
+const dateFormatedEl = document.getElementById("date-calendar-formated");
 const extraButton = document.getElementById("extra-button");
 const submitButton = document.getElementById("submit-button");
 const barLoader = document.querySelector(".loader");
@@ -37,6 +48,18 @@ extraButton.addEventListener("click", (e) => {
     extraFieldset.style.maxHeight = "0";
     extraFieldset.style.opacity = "0";
   }
+});
+
+// Format and set date into the hidden input
+dateToFormatEl.addEventListener("change", (e) => {
+  const date = new Date(e.target.value);
+
+  const friendlyDate = date.toLocaleString("es-AR", formatOptions);
+
+  const finalString =
+    friendlyDate.charAt(0).toUpperCase() + friendlyDate.slice(1);
+
+  dateFormatedEl.value = finalString;
 });
 
 // AJAX operations with formspree
