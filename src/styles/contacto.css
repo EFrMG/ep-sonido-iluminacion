@@ -402,6 +402,7 @@
 /* Dev form specific */
 .contact-form-modal {
   --modal-opacity: 1;
+  --modal-translate: 0 0;
   position: fixed;
   inset: 0;
   margin: auto;
@@ -415,15 +416,20 @@
   z-index: 100;
   overflow: auto;
   opacity: var(--modal-opacity);
+  translate: var(--modal-translate);
 
-  transition: opacity var(--trs-l) 350ms;
+  transition:
+    opacity var(--trs-m) 230ms,
+    translate var(--trs-l) 230ms;
 }
 
 .contact-form-modal[open] {
   opacity: var(--modal-opacity);
+  translate: var(--modal-translate);
 
   @starting-style {
     opacity: 0;
+    translation: 0 2.25rem;
   }
 }
 
@@ -506,7 +512,8 @@
 
 .dev-contact {
   width: fit-content;
-  margin: 0 1cap var(--spacing-ml) auto;
+  margin: 0 1cap var(--spacing-xl) auto;
+  padding-block: calc(var(--spacing-l) - 12px) var(--spacing-xl);
   padding-inline: var(--spacing-m);
   font-size: var(--fz-m);
   text-align: right;

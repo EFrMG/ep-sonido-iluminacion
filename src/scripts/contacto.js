@@ -207,8 +207,10 @@ closeDevModalButton.addEventListener("click", (e) => {
     devContactModal.close();
     document.body.classList.remove("no-scroll");
     devContactModal.style.removeProperty("--modal-opacity");
+    devContactModal.style.removeProperty("--modal-translate");
   }, 1100);
   devContactModal.style.setProperty("--modal-opacity", "0");
+  devContactModal.style.setProperty("--modal-translate", "0 2.25rem");
 });
 
 devContactModal.addEventListener("cancel", (e) => {
@@ -217,8 +219,10 @@ devContactModal.addEventListener("cancel", (e) => {
     devContactModal.close();
     document.body.classList.remove("no-scroll");
     devContactModal.style.removeProperty("--modal-opacity");
+    devContactModal.style.removeProperty("--modal-translate");
   }, 1100);
   devContactModal.style.setProperty("--modal-opacity", "0");
+  devContactModal.style.setProperty("--modal-translate", "0 2.25rem");
 });
 
 // AJAX operations with formspree
@@ -263,8 +267,10 @@ devForm.addEventListener("submit", async (e) => {
           devContactModal.close();
           document.body.classList.remove("no-scroll");
           devContactModal.style.removeProperty("--modal-opacity");
+          devContactModal.style.removeProperty("--modal-translate");
         }, 1100);
         devContactModal.style.setProperty("--modal-opacity", "0");
+        devContactModal.style.setProperty("--modal-translate", "0 2.25rem");
         devForm.reset();
       }, 2500);
     } else {

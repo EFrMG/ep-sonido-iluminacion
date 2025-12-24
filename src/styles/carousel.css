@@ -81,14 +81,14 @@
 
 @media screen and (max-width: 900px) {
   .carousel-wrapper {
-    margin: var(--spacing-l) var(--spacing-m) var(--spacing-xl);
+    margin: var(--spacing-l) var(--spacing-m) var(--spacing-xxl);
   }
 }
 
 @media screen and (max-width: 500px) {
   .carousel-wrapper {
     margin: var(--spacing-l) var(--spacing-m)
-      calc(var(--spacing-l) + var(--spacing-xxl));
+      calc(var(--spacing-xl) + var(--spacing-xxl));
   }
 
   .splide__arrow {

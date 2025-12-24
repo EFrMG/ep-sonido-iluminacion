@@ -9,8 +9,8 @@
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 90vw), 1fr));
   place-items: center;
   gap: var(--spacing-l);
-  margin-block: var(--spacing-l) var(--spacing-xxl);
-  padding: var(--spacing-l) var(--spacing-m);
+  margin-block: var(--spacing-l) var(--spacing-xl);
+  padding: var(--spacing-l) var(--spacing-m) var(--spacing-xl);
 }
 
 .card-anchor:active .gallery-card {
@@ -129,6 +129,12 @@
     object-fit: cover;
     border: var(--border-width-s) solid var(--primary-400);
     border-radius: 0 0 var(--radius-m) var(--radius-m);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery-cards-wrapper {
+    margin-block: var(--spacing-l) var(--spacing-xxl);
   }
 }
 

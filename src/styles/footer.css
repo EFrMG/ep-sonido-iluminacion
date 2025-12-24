@@ -16,7 +16,7 @@
   justify-content: space-between;
   gap: var(--spacing-m);
   width: 100%;
-  padding: 0.75em 1.25em 0.5em;
+  padding: var(--spacing-ml) var(--spacing-m);
 }
 
 .main-address {
@@ -130,8 +130,8 @@
 }
 
 .copyright-icon {
-  height: 1.25em;
-  width: 1.25em;
+  height: 1em;
+  width: 1em;
   mask: url("/copyright-icon.svg") center / contain no-repeat;
   background-color: var(--text-clr);
   z-index: 9;
@@ -300,6 +300,7 @@ body.light-theme #sistema-th {
     gap: calc(var(--spacing-m) + 10px);
     flex-wrap: wrap;
     justify-content: center;
+    padding: var(--spacing-m) var(--spacing-m) var(--spacing-ml);
   }
 
   &:hover .copy-icon-tooltip-menu,
