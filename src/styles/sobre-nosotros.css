@@ -26,6 +26,7 @@
   font-family: var(--ff-italics);
   font-style: italic;
   font-size: var(--fz-mll);
+  color: var(--primary-900);
 }
 
 .about-intro {
@@ -44,7 +45,6 @@
   background-color: var(--secondary-100);
   font-size: var(--fz-m);
   line-height: 1.75;
-  color: var(--primary-900);
   text-align: center;
   border-radius: var(--radius-m);
   border-block-start: var(--border-width-m) solid var(--accent-400);

@@ -308,9 +308,9 @@
   background: linear-gradient(
     to right,
     hsl(224, 20%, 12%) 0%,
-    hsl(224, 20%, 12%) 66%,
-    hsl(224, 20%, 12%, 0.8) 80%,
-    hsla(224, 20%, 12%, 0.7) 85%,
+    hsl(224, 20%, 12%) 72%,
+    hsla(224, 20%, 12%, 0.65) 82%,
+    hsla(224, 20%, 12%, 0.5) 88.5%,
     transparent 100%
   );
   border-radius: var(--radius-l) var(--radius-xl) var(--radius-xl)
@@ -331,6 +331,8 @@
   border-radius: var(--radius-l);
   box-shadow: var(--shadow-2);
   object-fit: cover;
+  border: var(--border-width-s) solid var(--accent-500);
+  transform: perspective(1200px) rotateY(-7deg);
 }
 
 .about-us-title,

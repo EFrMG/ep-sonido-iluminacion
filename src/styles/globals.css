@@ -763,6 +763,9 @@ label {
 
     &:first-of-type {
       margin-block-start: 1.1875em;
+      &:not(.only-white) {
+        color: var(--primary-900);
+      }
     }
   }
 }
