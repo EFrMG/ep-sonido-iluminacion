@@ -826,6 +826,7 @@ label {
 
 .about-cta-title {
   font-size: var(--fz-xl);
+  letter-spacing: 0.075rem;
   color: var(--primary-900);
   margin-block-end: var(--spacing-m);
   font-weight: 650;
@@ -834,6 +835,7 @@ label {
 
 .about-cta-description {
   font-size: var(--fz-ml);
+  letter-spacing: 0.1rem;
   margin-block-end: var(--spacing-l);
   perspective: 150px;
 }
@@ -863,6 +865,7 @@ label {
   padding: var(--spacing-m) var(--spacing-l);
   font-family: var(--ff-extra-bold);
   font-size: var(--fz-ml);
+  letter-spacing: 0.03125rem;
   color: var(--text-900);
   border: var(--border-width-m) solid var(--accent-400);
   border-radius: var(--radius-m);
