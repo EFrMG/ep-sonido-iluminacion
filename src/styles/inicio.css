@@ -68,7 +68,7 @@
   font-size: var(--fz-xxl);
   font-weight: 500;
   margin-bottom: var(--spacing-m);
-  animation: hero-fade-in var(--trs-out) both;
+  animation: hero-fade-in var(--trs-out) 95ms both;
   color: var(--primary-500);
   color: hsl(51, 88%, 88%);
 }
@@ -79,7 +79,7 @@
   letter-spacing: -0.015em;
   color: hsl(51, 91%, 51%);
   margin-block-end: var(--spacing-xl);
-  animation: hero-fade-in-sec var(--trs-out-long) 230ms both;
+  animation: hero-fade-in-sec var(--trs-out-long) 320ms both;
 }
 
 .hero-cta-buttons {
