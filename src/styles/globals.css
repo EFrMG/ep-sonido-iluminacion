@@ -784,7 +784,7 @@ label {
   font-family: var(--ff-heading);
   font-size: var(--fz-xl);
   font-weight: 630;
-  letter-spacing: 0.017em;
+  letter-spacing: 0.015em;
   transition: color var(--trs-s);
   animation: h2-in both var(--trs-l) 350ms;
 }
@@ -826,7 +826,7 @@ label {
 
 .about-cta-title {
   font-size: var(--fz-xl);
-  letter-spacing: 0.075rem;
+  letter-spacing: 0.015em;
   color: var(--primary-900);
   margin-block-end: var(--spacing-m);
   font-weight: 650;
@@ -835,7 +835,7 @@ label {
 
 .about-cta-description {
   font-size: var(--fz-ml);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.02em;
   margin-block-end: var(--spacing-l);
   perspective: 150px;
 }
