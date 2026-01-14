@@ -9,7 +9,7 @@
     var(--bkg-clr-shared) 60%,
     var(--secondary-100-shared) 93%
   );
-  box-shadow: 0 3px 26px 0 var(--accent-100);
+  box-shadow: 0 -3px 19px 0 var(--accent-100);
   z-index: 100;
 
   transition: min-height var(--trs-out);
