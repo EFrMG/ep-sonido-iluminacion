@@ -14,7 +14,6 @@
   --ff-heading-lh: 1.2;
   --ff-code: monospace, monospace;
   --body-max-width: 80ch;
-  --spacing-xs: 0.25rem;
   --spacing-s: 0.5rem;
   --spacing-ms: 0.75rem;
   --spacing-m: 1rem;
@@ -32,14 +31,12 @@
   --fz-l: 2rem;
   --fz-xl: 2.5625rem;
   --fz-xxl: 3.25rem;
-  --lh-base: 1.5;
   --radius-s: 5px;
   --radius-m: 15px;
   --radius-l: 30px;
   --radius-xl: 75px;
   --border-width-s: 1px;
   --border-width-m: 2px;
-  --border-width-l: 5px;
 
   --shadow-1:
     0 3px 5px 0px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
@@ -68,29 +65,8 @@
       hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
     0 40px 40px -2px
       hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
-  --shadow-5:
-    0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-    0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-    0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-    0 12px 10px -2px
-      hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-    0 22px 18px -2px
-      hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-    0 41px 33px -2px
-      hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
-    0 100px 80px -2px
-      hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
   --inner-shadow-1: inset 0 -3px 5px 0 hsla(0, 0%, 18%, 0.39);
-  --inner-shadow-2:
-    inset 0 2px 8px 0
-      hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)),
-    var(--inner-shadow-highlight);
-  --inner-shadow-3:
-    inset 0 2px 14px 0
-      hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)),
-    var(--inner-shadow-highlight);
 
-  --trs-xs: 135ms ease-in-out;
   --trs-s: 230ms ease-in-out;
   --trs-m: 500ms ease-in-out;
   --trs-l: 1075ms ease-in-out;
@@ -133,28 +109,6 @@
       0.607 92.1%,
       1
     );
-  --trs-back-in-out: 500ms
-    linear(
-      0,
-      -0.004 4.8%,
-      -0.02 9.3%,
-      -0.124 26.1%,
-      -0.126 30.3%,
-      -0.104 33.9%,
-      -0.026 38.7%,
-      0.111 43.1%,
-      0.301 47%,
-      0.819 55.3%,
-      0.969 59.2%,
-      1.07 63.5%,
-      1.118 67.8%,
-      1.127 72.8%,
-      1.108 77.4%,
-      1.019 90.9%,
-      1.004 95.3%,
-      1
-    );
-
   --trs-back-in-out-short: 245ms
     linear(
       0,
@@ -176,7 +130,6 @@
       1.004 95.3%,
       1
     );
-  --trs-back-out: 500ms cubic-bezier(0.7, 1.6, 0.63, 1);
   --trs-bounce: 800ms
     linear(
       0,
@@ -190,8 +143,6 @@
       0.994 91.1%,
       1
     );
-
-  --plyr-color-main: var(--accent-500);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -203,44 +154,19 @@
     --text-clr: var(--text-900);
     --text-clr-dimer: color-mix(in hsl, var(--text-clr) 34%, transparent 66%);
     --bkg-clr: var(--secondary-50);
-    --text-50: hsl(53, 31%, 5%);
-    --text-100: hsl(49, 33%, 10%);
-    --text-200: hsl(51, 33%, 20%);
-    --text-300: hsl(51, 33%, 30%);
-    --text-400: hsl(51, 33%, 40%);
-    --text-500: hsl(51, 33%, 50%);
-    --text-600: hsl(51, 33%, 60%);
     --text-700: hsl(51, 33%, 70%);
-    --text-800: hsl(51, 33%, 80%);
     --text-900: hsl(49, 33%, 90%);
-    --text-950: hsl(53, 31%, 95%);
     --text-clr-dimish: hsla(51, 33%, 80%, 0.85);
     --text-clr-dim: hsla(51, 33%, 60%, 0.7);
 
-    --background-50: hsl(53, 31%, 5%);
-    --background-100: hsl(49, 33%, 10%);
-    --background-200: hsl(49, 33%, 20%);
-    --background-300: hsl(49, 33%, 30%);
-    --background-400: hsl(49, 33%, 40%);
-    --background-500: hsl(50, 33%, 50%);
-    --background-600: hsl(49, 33%, 60%);
-    --background-700: hsl(49, 33%, 70%);
-    --background-800: hsl(49, 33%, 80%);
-    --background-900: hsl(49, 33%, 90%);
-    --background-950: hsl(53, 31%, 95%);
-
-    --primary-50: hsl(52, 92%, 5%);
     --primary-100: hsl(51, 88%, 10%);
     --primary-200: hsl(51, 88%, 20%);
     --primary-300: hsl(51, 90%, 30%);
-    --primary-350: hsl(51, 90%, 35%);
     --primary-400: hsl(51, 89%, 40%);
     --primary-500: hsl(51, 89%, 50%);
-    --primary-600: hsl(51, 89%, 60%);
     --primary-700: hsl(51, 90%, 70%);
     --primary-800: hsl(51, 88%, 80%);
     --primary-900: hsl(51, 88%, 90%);
-    --primary-950: hsl(50, 92%, 95%);
 
     --secondary-50: hsl(225, 31%, 5%);
     --secondary-100: hsl(226, 33%, 10%);
@@ -253,8 +179,6 @@
     --secondary-600: hsl(225, 33%, 60%);
     --secondary-700: hsl(225, 33%, 70%);
     --secondary-800: hsl(224, 33%, 80%);
-    --secondary-900: hsl(226, 33%, 90%);
-    --secondary-950: hsl(225, 31%, 95%);
 
     --accent-50: hsl(285, 31%, 5%);
     --accent-100: hsl(286, 33%, 10%);
@@ -264,9 +188,6 @@
     --accent-500: hsl(288, 32%, 50%);
     --accent-600: hsl(288, 32%, 60%);
     --accent-700: hsl(288, 32%, 70%);
-    --accent-800: hsl(289, 31%, 80%);
-    --accent-900: hsl(286, 33%, 90%);
-    --accent-950: hsl(293, 31%, 95%);
 
     --h1-shadow-1-shared: hsla(49, 33%, 90%, 0.32);
     --h1-shadow-2-shared: hsla(49, 33%, 90%, 0.28);
@@ -360,47 +281,21 @@
     --shadow-strength: 3.5%;
     --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001;
 
-    --text-50: hsl(53, 31%, 95%);
-    --text-100: hsl(49, 33%, 90%);
-    --text-200: hsl(51, 31%, 80%);
-    --text-300: hsl(51, 32%, 70%);
-    --text-400: hsl(51, 32%, 60%);
-    --text-500: hsl(51, 32%, 50%);
-    --text-600: hsl(51, 32%, 40%);
     --text-700: hsl(51, 32%, 30%);
-    --text-800: hsl(51, 31%, 20%);
     --text-900: hsl(49, 33%, 10%);
-    --text-950: hsl(53, 31%, 5%);
     --text-clr-dimish: hsla(51, 31%, 20%, 0.85);
     --text-clr-dim: hsla(51, 32%, 40%, 0.7);
 
-    --background-50: hsl(53, 31%, 95%);
-    --background-100: hsl(49, 33%, 90%);
-    --background-200: hsl(49, 33%, 80%);
-    --background-300: hsl(49, 33%, 70%);
-    --background-400: hsl(49, 33%, 60%);
-    --background-500: hsl(50, 33%, 50%);
-    --background-600: hsl(49, 33%, 40%);
-    --background-700: hsl(49, 33%, 30%);
-    --background-800: hsl(49, 33%, 20%);
-    --background-900: hsl(49, 33%, 10%);
-    --background-950: hsl(53, 31%, 5%);
-
-    --primary-50: hsl(50, 92%, 95%);
     --primary-100: hsl(51, 88%, 90%);
     --primary-200: hsl(51, 88%, 80%);
     --primary-300: hsl(51, 90%, 70%);
-    --primary-350: hsl(51, 90%, 65%);
     --primary-400: hsl(51, 89%, 60%);
     --primary-500: hsl(51, 89%, 50%);
-    --primary-600: hsl(51, 89%, 40%);
     --primary-700: hsl(51, 90%, 30%);
     --primary-800: hsl(51, 88%, 20%);
     --primary-900: hsl(51, 88%, 10%);
-    --primary-950: hsl(52, 92%, 5%);
 
     --secondary-50: hsl(225, 31%, 88%);
-    --secondary-51: hsl(225, 31%, 95%);
     --secondary-100: hsl(222, 33%, 90%);
     --secondary-150: hsl(223, 33%, 95%);
     --secondary-200: hsl(224, 33%, 80%);
@@ -411,8 +306,6 @@
     --secondary-600: hsl(224, 33%, 40%);
     --secondary-700: hsl(224, 33%, 30%);
     --secondary-800: hsl(224, 33%, 20%);
-    --secondary-900: hsl(222, 33%, 10%);
-    --secondary-950: hsl(225, 31%, 5%);
 
     --accent-50: hsl(293, 31%, 95%);
     --accent-100: hsl(286, 33%, 90%);
@@ -422,9 +315,6 @@
     --accent-500: hsl(288, 32%, 50%);
     --accent-600: hsl(288, 32%, 40%);
     --accent-700: hsl(288, 32%, 30%);
-    --accent-800: hsl(289, 31%, 20%);
-    --accent-900: hsl(286, 33%, 10%);
-    --accent-950: hsl(285, 31%, 5%);
   }
 }
 
@@ -436,44 +326,19 @@ body.dark-theme {
   --text-clr: var(--text-900);
   --text-clr-dimer: color-mix(in hsl, var(--text-clr) 34%, transparent 66%);
   --bkg-clr: var(--secondary-50);
-  --text-50: hsl(53, 31%, 5%);
-  --text-100: hsl(49, 33%, 10%);
-  --text-200: hsl(51, 33%, 20%);
-  --text-300: hsl(51, 33%, 30%);
-  --text-400: hsl(51, 33%, 40%);
-  --text-500: hsl(51, 33%, 50%);
-  --text-600: hsl(51, 33%, 60%);
   --text-700: hsl(51, 33%, 70%);
-  --text-800: hsl(51, 33%, 80%);
   --text-900: hsl(49, 33%, 90%);
-  --text-950: hsl(53, 31%, 95%);
   --text-clr-dimish: hsla(51, 33%, 80%, 0.85);
   --text-clr-dim: hsla(51, 33%, 60%, 0.7);
 
-  --background-50: hsl(53, 31%, 5%);
-  --background-100: hsl(49, 33%, 10%);
-  --background-200: hsl(49, 33%, 20%);
-  --background-300: hsl(49, 33%, 30%);
-  --background-400: hsl(49, 33%, 40%);
-  --background-500: hsl(50, 33%, 50%);
-  --background-600: hsl(49, 33%, 60%);
-  --background-700: hsl(49, 33%, 70%);
-  --background-800: hsl(49, 33%, 80%);
-  --background-900: hsl(49, 33%, 90%);
-  --background-950: hsl(53, 31%, 95%);
-
-  --primary-50: hsl(52, 92%, 5%);
   --primary-100: hsl(51, 88%, 10%);
   --primary-200: hsl(51, 88%, 20%);
   --primary-300: hsl(51, 90%, 30%);
-  --primary-350: hsl(51, 90%, 35%);
   --primary-400: hsl(51, 89%, 40%);
   --primary-500: hsl(51, 89%, 50%);
-  --primary-600: hsl(51, 89%, 60%);
   --primary-700: hsl(51, 90%, 70%);
   --primary-800: hsl(51, 88%, 80%);
   --primary-900: hsl(51, 88%, 90%);
-  --primary-950: hsl(50, 92%, 95%);
 
   --secondary-50: hsl(225, 31%, 5%);
   --secondary-100: hsl(226, 33%, 10%);
@@ -486,8 +351,6 @@ body.dark-theme {
   --secondary-600: hsl(225, 33%, 60%);
   --secondary-700: hsl(225, 33%, 70%);
   --secondary-800: hsl(224, 33%, 80%);
-  --secondary-900: hsl(226, 33%, 90%);
-  --secondary-950: hsl(225, 31%, 95%);
 
   --accent-50: hsl(285, 31%, 5%);
   --accent-100: hsl(286, 33%, 10%);
@@ -497,9 +360,6 @@ body.dark-theme {
   --accent-500: hsl(288, 32%, 50%);
   --accent-600: hsl(288, 32%, 60%);
   --accent-700: hsl(288, 32%, 70%);
-  --accent-800: hsl(289, 31%, 80%);
-  --accent-900: hsl(286, 33%, 90%);
-  --accent-950: hsl(293, 31%, 95%);
 
   --h1-shadow-1-shared: hsla(49, 33%, 90%, 0.32);
   --h1-shadow-2-shared: hsla(49, 33%, 90%, 0.28);
@@ -590,47 +450,21 @@ body.light-theme {
   --shadow-strength: 3.5%;
   --inner-shadow-highlight: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001;
 
-  --text-50: hsl(53, 31%, 95%);
-  --text-100: hsl(49, 33%, 90%);
-  --text-200: hsl(51, 31%, 80%);
-  --text-300: hsl(51, 32%, 70%);
-  --text-400: hsl(51, 32%, 60%);
-  --text-500: hsl(51, 32%, 50%);
-  --text-600: hsl(51, 32%, 40%);
   --text-700: hsl(51, 32%, 30%);
-  --text-800: hsl(51, 31%, 20%);
   --text-900: hsl(49, 33%, 10%);
-  --text-950: hsl(53, 31%, 5%);
   --text-clr-dimish: hsla(51, 31%, 20%, 0.85);
   --text-clr-dim: hsla(51, 32%, 40%, 0.7);
 
-  --background-50: hsl(53, 31%, 95%);
-  --background-100: hsl(49, 33%, 90%);
-  --background-200: hsl(49, 33%, 80%);
-  --background-300: hsl(49, 33%, 70%);
-  --background-400: hsl(49, 33%, 60%);
-  --background-500: hsl(50, 33%, 50%);
-  --background-600: hsl(49, 33%, 40%);
-  --background-700: hsl(49, 33%, 30%);
-  --background-800: hsl(49, 33%, 20%);
-  --background-900: hsl(49, 33%, 10%);
-  --background-950: hsl(53, 31%, 5%);
-
-  --primary-50: hsl(50, 92%, 95%);
   --primary-100: hsl(51, 88%, 90%);
   --primary-200: hsl(51, 88%, 80%);
   --primary-300: hsl(51, 90%, 70%);
-  --primary-350: hsl(51, 90%, 65%);
   --primary-400: hsl(51, 89%, 60%);
   --primary-500: hsl(51, 89%, 50%);
-  --primary-600: hsl(51, 89%, 40%);
   --primary-700: hsl(51, 90%, 30%);
   --primary-800: hsl(51, 88%, 20%);
   --primary-900: hsl(51, 88%, 10%);
-  --primary-950: hsl(52, 92%, 5%);
 
   --secondary-50: hsl(225, 31%, 88%);
-  --secondary-51: hsl(225, 31%, 95%);
   --secondary-100: hsl(222, 33%, 90%);
   --secondary-150: hsl(223, 33%, 95%);
   --secondary-200: hsl(224, 33%, 80%);
@@ -641,8 +475,6 @@ body.light-theme {
   --secondary-600: hsl(224, 33%, 40%);
   --secondary-700: hsl(224, 33%, 30%);
   --secondary-800: hsl(224, 33%, 20%);
-  --secondary-900: hsl(222, 33%, 10%);
-  --secondary-950: hsl(225, 31%, 5%);
 
   --accent-50: hsl(293, 31%, 95%);
   --accent-100: hsl(286, 33%, 90%);
@@ -652,9 +484,6 @@ body.light-theme {
   --accent-500: hsl(288, 32%, 50%);
   --accent-600: hsl(288, 32%, 40%);
   --accent-700: hsl(288, 32%, 30%);
-  --accent-800: hsl(289, 31%, 20%);
-  --accent-900: hsl(286, 33%, 10%);
-  --accent-950: hsl(285, 31%, 5%);
 }
 
 /*General selectors*/
