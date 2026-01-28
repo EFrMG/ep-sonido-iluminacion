@@ -143,6 +143,8 @@
       0.994 91.1%,
       1
     );
+
+  --plyr-color-main: var(--accent-500);
 }
 
 @media (prefers-color-scheme: dark) {
