@@ -26,7 +26,7 @@
 .contact-important-fieldset,
 .contact-extra-fieldset {
   & label {
-    font-size: var(--fz-ml);
+    font-size: var(--fz-m);
     border: none;
   }
 
@@ -129,7 +129,7 @@
 }
 
 .checkboxes-description {
-  font-size: var(--fz-ml);
+  font-size: var(--fz-m);
   padding: 0.25em 0.375em 0.5em;
   line-height: var(--ff-heading-lh);
   text-align: center;
@@ -565,11 +565,15 @@
   .contact-important-fieldset,
   .contact-extra-fieldset {
     & label {
-      font-size: var(--fz-ms);
+      font-size: var(--fz-s);
     }
     & :is(input, textarea, select) {
       font-size: var(--fz-ms);
     }
+  }
+
+  .checkboxes-description {
+    font-size: var(--fz-ms);
   }
 
   .clear-para {
