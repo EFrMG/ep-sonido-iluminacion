@@ -165,7 +165,7 @@
     --primary-200: hsl(51, 88%, 20%);
     --primary-300: hsl(51, 90%, 30%);
     --primary-400: hsl(51, 89%, 40%);
-    --primary-500: hsl(51, 89%, 50%);
+    --primary-500: hsl(51, 89%, 55%);
     --primary-700: hsl(51, 90%, 70%);
     --primary-800: hsl(51, 88%, 80%);
     --primary-900: hsl(51, 88%, 90%);
@@ -337,7 +337,7 @@ body.dark-theme {
   --primary-200: hsl(51, 88%, 20%);
   --primary-300: hsl(51, 90%, 30%);
   --primary-400: hsl(51, 89%, 40%);
-  --primary-500: hsl(51, 89%, 50%);
+  --primary-500: hsl(51, 89%, 55%);
   --primary-700: hsl(51, 90%, 70%);
   --primary-800: hsl(51, 88%, 80%);
   --primary-900: hsl(51, 88%, 90%);
@@ -614,7 +614,7 @@ label {
   margin: 0.5rem 0 0;
   font-family: var(--ff-heading);
   font-size: var(--fz-xl);
-  font-weight: 630;
+  font-weight: 600;
   letter-spacing: 0.015em;
   transition: color var(--trs-s);
   animation: h2-in both var(--trs-l) 350ms;
@@ -660,8 +660,8 @@ label {
   letter-spacing: 0.015em;
   color: var(--primary-900);
   margin-block-end: var(--spacing-m);
-  font-weight: 650;
-  font-variation-settings: "wght" 650;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 
 .about-cta-description {
@@ -746,6 +746,23 @@ label {
   transition: translate var(--trs-s);
 }
 
+.about-us-title,
+.events-title {
+  font-size: var(--fz-xl);
+}
+
+.about-us-title {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 2;
+}
+
+#services-under-hero-para {
+  font-size: var(--fz-ml);
+  animation: h2-para-in both var(--trs-l) 575ms;
+}
+
 @media screen and (max-width: 900px) {
   .about-cta-button {
     padding: var(--spacing-ms) var(--spacing-ml);
@@ -754,6 +771,33 @@ label {
 }
 
 @media screen and (max-width: 700px) {
+  .global-h2 {
+    font-size: var(--fz-l);
+  }
+
+  .global-h2-hgroup {
+    & p {
+      font-size: var(--fz-m);
+    }
+  }
+
+  #services-under-hero-para {
+    font-size: var(--fz-m);
+  }
+
+  .about-cta-title {
+    font-size: var(--fz-l);
+  }
+
+  .about-cta-description {
+    font-size: var(--fz-m);
+  }
+
+  .about-us-title,
+  .events-title {
+    font-size: var(--fz-l);
+  }
+
   .main-whatsapp-icon {
     height: 44px;
     width: 44px;
@@ -798,11 +842,11 @@ label {
   }
 
   .about-cta-title {
-    font-size: var(--fz-l);
+    font-size: var(--fz-ml);
   }
 
   .about-cta-description {
-    font-size: var(--fz-m);
+    font-size: var(--fz-ms);
   }
 }
 
@@ -810,6 +854,21 @@ label {
   .about-cta-button {
     padding: var(--spacing-s) var(--spacing-m);
     font-size: var(--fz-xs);
+  }
+
+  .about-us-title,
+  .events-title {
+    font-size: var(--fz-ml);
+  }
+
+  .global-h2-hgroup {
+    & p {
+      font-size: var(--fz-ms);
+    }
+  }
+
+  #services-under-hero-para {
+    font-size: var(--fz-ms);
   }
 }
 

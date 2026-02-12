@@ -251,7 +251,7 @@ class SingleUnderline {
     // Add padding to extend the underline.
     // The canvas will not measure text precisely and as it is it is better to have it fall short given text styles
     // than to extend past at times given display style of the title element rendering late
-    const padding = 29;
+    const padding = 5;
     const textWidth = textMetrics.width / this.ratio + padding;
 
     const startX = (rect.width - textWidth) / 2;

@@ -25,7 +25,7 @@
 .about-hero-subtitle {
   font-family: var(--ff-italics);
   font-style: italic;
-  font-size: var(--fz-mll);
+  font-size: var(--fz-xl);
   color: var(--primary-900);
 }
 
@@ -43,7 +43,7 @@
 .about-intro-text {
   padding: var(--spacing-l);
   background-color: var(--secondary-100);
-  font-size: var(--fz-m);
+  font-size: var(--fz-ml);
   line-height: 1.75;
   text-align: center;
   border-radius: var(--radius-m);
@@ -75,7 +75,11 @@
 
 .feature-card {
   position: relative;
-  background-color: var(--secondary-100);
+  background-color: color-mix(
+    in hsl,
+    var(--secondary-100) 70%,
+    transparent 30%
+  );
   border-radius: var(--radius-m);
   padding: var(--spacing-l);
   border: var(--border-width-s) solid var(--secondary-400);
@@ -152,19 +156,49 @@
 }
 
 .feature-card-title {
-  font-size: var(--fz-ml);
+  font-size: var(--fz-l);
   color: var(--primary-900);
   margin-block-end: var(--spacing-m);
-  font-weight: 670;
-  font-variation-settings: "wght" 670;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 
 .feature-card-description {
-  font-size: var(--fz-m);
+  font-size: var(--fz-ml);
+}
+
+@media only screen and (max-width: 900px) {
+  .about-hero-subtitle {
+    font-size: var(--fz-l);
+  }
+  .about-intro-text {
+    font-size: var(--fz-m);
+  }
+  .feature-card-title {
+    font-size: var(--fz-l);
+  }
+  .feature-card-description {
+    font-size: var(--fz-m);
+  }
 }
 
 @media screen and (max-width: 500px) {
   .about-hero {
     margin: 0 auto var(--spacing-ml) auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .about-hero-subtitle {
+    font-size: var(--fz-mll);
+  }
+  .about-intro-text {
+    font-size: var(--fz-ms);
+  }
+  .feature-card-title {
+    font-size: var(--fz-ml);
+  }
+  .feature-card-description {
+    font-size: var(--fz-ms);
   }
 }

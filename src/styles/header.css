@@ -233,7 +233,7 @@
 
 .main-title {
   margin: 0;
-  font-size: 1.8125rem;
+  font-size: var(--fz-mll);
   font-weight: 500;
   font-variation-settings: "wght" 555;
   transition:

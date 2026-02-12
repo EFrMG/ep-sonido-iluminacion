@@ -197,10 +197,6 @@
   user-select: none;
   touch-action: manipulation;
 }
-.form-button.submit {
-}
-.form-button.extra {
-}
 
 .form-button .shadow {
   position: absolute;
@@ -309,7 +305,7 @@
 }
 
 .clear-para {
-  font-size: var(--fz-m);
+  font-size: var(--fz-ml);
 }
 
 .map-embed {
@@ -515,12 +511,13 @@
   margin: 0 1cap var(--spacing-xl) auto;
   padding-block: calc(var(--spacing-l) - 12px) var(--spacing-xl);
   padding-inline: var(--spacing-m);
-  font-size: var(--fz-m);
+  font-size: var(--fz-ml);
   text-align: right;
   opacity: 0.88;
 
   & a {
     font-family: var(--ff-extra);
+    font-size: var(--fz-m);
     text-decoration: underline;
     text-decoration-color: var(--accent-301-shared);
     transition: text-decoration-color var(--trs-s);
@@ -564,7 +561,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .contact-important-fieldset,
   .contact-extra-fieldset {
     & label {
@@ -575,6 +572,20 @@
     }
   }
 
+  .clear-para {
+    font-size: var(--fz-m);
+  }
+
+  .dev-contact {
+    font-size: var(--fz-m);
+
+    & a {
+      font-size: var(--fz-ms);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
   .dev-contact {
     width: fit-content;
     margin: 0 1cap var(--spacing-xxl) auto;
@@ -582,6 +593,9 @@
 
   #close-dev-modal-button {
     inset: var(--spacing-s) calc(var(--spacing-s) + 4px) auto auto;
+  }
+  .form-button .front {
+    font-size: var(--fz-s);
   }
 
   .dev-notice-para {
@@ -598,6 +612,24 @@
     & label[for="dev-email"]::after,
     & label[for="dev-message"]::after {
       font-size: var(--fz-ml);
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .where-para {
+    font-size: var(--fz-mll);
+  }
+
+  .clear-para {
+    font-size: var(--fz-ms);
+  }
+
+  .dev-contact {
+    font-size: var(--fz-ms);
+
+    & a {
+      font-size: var(--fz-s);
     }
   }
 }

@@ -1,8 +1,3 @@
-#services-under-hero-para {
-  font-size: var(--fz-ml);
-  animation: h2-para-in both var(--trs-l) 575ms;
-}
-
 .services-middle-section {
   padding: var(--spacing-l);
 }
@@ -203,6 +198,7 @@
 }
 
 .service-card-details-title {
+  font-family: var(--ff-base);
   font-size: var(--fz-m);
   color: var(--primary-900);
   margin-block-end: var(--spacing-m);
@@ -215,8 +211,8 @@
   margin-block-end: var(--spacing-m);
 
   & li {
-    font-family: var(--ff-base);
-    font-size: var(--fz-ms);
+    font-family: var(--ff-medium);
+    font-size: var(--fz-s);
     color: var(--primary-800);
     padding-inline-start: calc(0.375ch + var(--spacing-ml));
     position: relative;
@@ -296,7 +292,7 @@
   }
 
   .service-card {
-    padding: var(--spacing-m);
+    padding: var(--spacing-ml);
   }
 
   .service-card-icon {
@@ -319,8 +315,12 @@
   }
 
   .service-card-description {
-    font-size: var(--fz-ms);
+    font-size: var(--fz-s);
     line-height: 1.5;
+  }
+
+  .service-card-details-title {
+    font-size: var(--fz-ms);
   }
 
   .service-card-list {
@@ -328,14 +328,45 @@
       font-size: var(--fz-s);
 
       &::before {
-        font-size: var(--fz-ml);
+        font-size: var(--fz-m);
       }
     }
+  }
+
+  .service-card-note {
+    font-size: var(--fz-s);
   }
 }
 
 @media screen and (max-width: 350px) {
+  .service-card {
+    padding: var(--spacing-m);
+  }
+
   .h3-icon {
     flex-wrap: wrap;
+  }
+
+  .service-card-title {
+    font-size: var(--fz-m);
+  }
+
+  .service-card-details-title {
+    font-size: var(--fz-s);
+  }
+
+  .service-card-list {
+    & li {
+      font-size: var(--fz-xs);
+      padding-inline-start: calc(1.375ch + var(--spacing-m));
+
+      &::before {
+        font-size: var(--fz-ms);
+      }
+    }
+  }
+
+  .service-card-note {
+    font-size: var(--fz-xs);
   }
 }

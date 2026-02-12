@@ -1,5 +1,5 @@
 .main-footer {
-  font-size: var(--fz-ms);
+  font-size: var(--fz-m);
   border-top: var(--border-width-s) solid var(--secondary-200-shared);
   background-image: linear-gradient(
     0deg,
@@ -36,10 +36,9 @@
   }
 
   & ul li a {
-    margin-inline: var(--spacing-ms);
+    margin-inline: var(--spacing-ms) var(--spacing-m);
     font-family: var(--ff-base);
     font-style: normal;
-    font-size: 1.125em;
     text-decoration: underline;
     text-decoration-color: var(--accent-301-shared);
     transition: text-decoration-color var(--trs-s);

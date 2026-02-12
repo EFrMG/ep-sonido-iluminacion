@@ -53,7 +53,7 @@
   font-size: var(--fz-ml);
 }
 .calendar-para.tip {
-  font-size: var(--fz-m);
+  font-size: var(--fz-ml);
 
   & span:first-of-type {
     font-family: var(--ff-italics);
@@ -61,6 +61,18 @@
     text-decoration: underline;
     text-decoration-style: dashed;
     text-decoration-color: var(--accent-301-shared);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .calendar-para.tip {
+    font-size: var(--fz-m);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .calendar-para.tip {
+    font-size: var(--fz-ms);
   }
 }
 
