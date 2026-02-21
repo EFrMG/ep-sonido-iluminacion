@@ -283,7 +283,7 @@
   font-family: var(--ff-heading);
   font-size: var(--fz-xl);
   color: hsl(288, 33%, 63%);
-  margin-block: var(--spacing-m) var(--spacing-l);
+  margin-block: var(--spacing-m) var(--spacing-ml);
 }
 
 .events-columns {
@@ -456,7 +456,7 @@
   }
 
   .about-us-column h4 {
-    margin-block: var(--spacing-m) var(--spacing-ml);
+    margin-block: var(--spacing-m) var(--spacing-m);
   }
 }
 
@@ -498,7 +498,7 @@
   }
 
   .about-us-column h4 {
-    margin-block: var(--spacing-ms) var(--spacing-m);
+    margin-block: var(--spacing-ms) var(--spacing-ms);
     font-size: var(--fz-l);
   }
 

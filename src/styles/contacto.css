@@ -26,6 +26,8 @@
 .contact-important-fieldset,
 .contact-extra-fieldset {
   & label {
+    display: inline-block;
+    padding: 0 var(--spacing-m) var(--spacing-s);
     font-size: var(--fz-m);
     border: none;
   }
@@ -110,7 +112,7 @@
     display: inline-block;
     height: 23px;
     width: 23px;
-    margin: 0;
+    margin: 0 0 0 0.1875rem;
     vertical-align: text-bottom;
     accent-color: var(--primary-601-shared);
     color-scheme: var(--color-scheme);
@@ -133,6 +135,7 @@
   padding: 0.25em 0.375em 0.5em;
   line-height: var(--ff-heading-lh);
   text-align: center;
+  padding: 0 var(--spacing-m) var(--spacing-m);
 }
 
 .checkbox-wrapper {
@@ -141,8 +144,11 @@
   flex-wrap: wrap;
   gap: 2cap;
   margin: 0 var(--spacing-m) var(--spacing-ml);
-  font-family: var(--ff-bold);
-  font-weight: 700;
+  font-family: var(--ff-medium);
+
+  & label {
+    padding: 0 var(--spacing-m) 0 var(--spacing-s);
+  }
 }
 
 .checkboxes {
