@@ -78,7 +78,7 @@
   font-weight: 600;
   font-size: var(--fz-l);
   letter-spacing: -0.015em;
-  color: hsl(51, 91%, 69%);
+  color: hsl(51deg 83% 58%);
   margin-block: var(--spacing-xl) var(--spacing-xl);
   animation: hero-fade-in-sec var(--trs-out-long) 320ms both;
 }
@@ -335,7 +335,7 @@
 
 .canvas-wrapper {
   position: relative;
-  color: var(--primary-700-shared);
+  color: var(--primary-600-shared);
   width: fit-content;
   margin: 0 auto var(--spacing-m);
 

@@ -35,6 +35,7 @@ html {
   tab-size: 4;
   interpolate-size: allow-keywords;
   overflow-wrap: break-word;
+  scrollbar-gutter: stable;
 }
 
 @media (prefers-reduced-motion: no-preference) {
