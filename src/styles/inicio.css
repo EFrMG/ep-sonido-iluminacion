@@ -301,7 +301,6 @@
   z-index: 2;
   padding: var(--spacing-xl);
   font-family: var(--ff-medium);
-  font-weight: bold;
   color: hsl(49, 33%, 90%);
   background: linear-gradient(
     to right,

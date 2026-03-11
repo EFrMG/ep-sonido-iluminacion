@@ -763,6 +763,10 @@ label {
   animation: h2-para-in both var(--trs-l) 575ms;
 }
 
+.semi-bold {
+  font-family: var(--ff-medium);
+}
+
 @media screen and (max-width: 900px) {
   .about-cta-button {
     padding: var(--spacing-ms) var(--spacing-ml);

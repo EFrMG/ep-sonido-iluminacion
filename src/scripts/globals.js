@@ -231,6 +231,46 @@ mobileForedrop.addEventListener("click", () => {
   toggleBurgerMenu();
 });
 
+// Burger menu swipe from right
+const swipeTreshold = 28; // min px horizontal distance
+const edgeZone = 55; // px from right edge to start swipe
+
+let touchStartX = null;
+let touchStartY = null;
+
+document.addEventListener(
+  "touchstart",
+  (e) => {
+    const touch = e.touches[0];
+    // Only register if it starts near the right edge
+    if (touch.clientX >= window.innerWidth - edgeZone) {
+      touchStartX = touch.clientX;
+      touchStartY = touch.clientY;
+    }
+  },
+  { passive: true },
+);
+
+document.addEventListener(
+  "touchend",
+  (e) => {
+    if (touchStartX === null) return;
+
+    const touch = e.changedTouches[0];
+    const deltaX = touchStartX - touch.clientX; // positive = swiped left
+    const deltaY = Math.abs(touch.clientY - touchStartY);
+
+    // Ensure it's more horizontal than vertical (not a scroll) (and a bit more)
+    if (deltaX > swipeTreshold && deltaX > deltaY + deltaY * 0.65) {
+      toggleBurgerMenu();
+    }
+
+    touchStartX = null;
+    touchStartY = null;
+  },
+  { passive: true },
+);
+
 // Path check on nav links
 const fullPath = window.location.pathname;
 const headerNavLinks = document.querySelectorAll(
