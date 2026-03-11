@@ -204,6 +204,7 @@ const burgerBtn = document.getElementById("burger-menu-button");
 const burgerMenu = document.getElementById("mobile-nav-menu");
 const mobileForedrop = document.querySelector(".main-burger-menu-foredrop");
 let burgerDelay = 0;
+let burgerMenuIsOpen = false;
 
 function toggleBurgerMenu() {
   if (burgerBtn.getAttribute("aria-expanded") === "true") {
@@ -219,6 +220,7 @@ function toggleBurgerMenu() {
       String(!(burgerBtn.getAttribute("aria-expanded") === "true")),
     );
     mobileForedrop.classList.remove("closing");
+    burgerMenuIsOpen = !burgerMenuIsOpen;
     burgerDelay = 0;
   }, burgerDelay);
 }
@@ -232,20 +234,23 @@ mobileForedrop.addEventListener("click", () => {
 });
 
 // Burger menu swipe from right
-const swipeTreshold = 28; // min px horizontal distance
-const edgeZone = 55; // px from right edge to start swipe
+const swipeTreshold = 39; // min px horizontal distance
+const rightEdgeZone = 85; // px from right edge to start swipe
 
-let touchStartX = null;
-let touchStartY = null;
+let rightTouchStartX = null;
+let rightTouchStartY = null;
 
 document.addEventListener(
   "touchstart",
   (e) => {
     const touch = e.touches[0];
-    // Only register if it starts near the right edge
-    if (touch.clientX >= window.innerWidth - edgeZone) {
-      touchStartX = touch.clientX;
-      touchStartY = touch.clientY;
+    // Only register if it starts near the right edge and the menu is closed
+    if (
+      touch.clientX >= window.innerWidth - rightEdgeZone &&
+      !burgerMenuIsOpen
+    ) {
+      rightTouchStartX = touch.clientX;
+      rightTouchStartY = touch.clientY;
     }
   },
   { passive: true },
@@ -254,19 +259,56 @@ document.addEventListener(
 document.addEventListener(
   "touchend",
   (e) => {
-    if (touchStartX === null) return;
+    if (rightTouchStartX === null) return;
 
     const touch = e.changedTouches[0];
-    const deltaX = touchStartX - touch.clientX; // positive = swiped left
-    const deltaY = Math.abs(touch.clientY - touchStartY);
+    const deltaX = rightTouchStartX - touch.clientX; // positive = swiped left
+    const deltaY = Math.abs(touch.clientY - rightTouchStartY);
 
     // Ensure it's more horizontal than vertical (not a scroll) (and a bit more)
     if (deltaX > swipeTreshold && deltaX > deltaY + deltaY * 0.65) {
       toggleBurgerMenu();
     }
 
-    touchStartX = null;
-    touchStartY = null;
+    rightTouchStartX = null;
+    rightTouchStartY = null;
+  },
+  { passive: true },
+);
+
+// Burger menu swipe from left
+let leftTouchStartX = null;
+let leftTouchStartY = null;
+
+document.addEventListener(
+  "touchstart",
+  (e) => {
+    const touch = e.touches[0];
+    // Only register if the menu is open
+    if (burgerMenuIsOpen) {
+      leftTouchStartX = touch.clientX;
+      leftTouchStartY = touch.clientY;
+    }
+  },
+  { passive: true },
+);
+
+document.addEventListener(
+  "touchend",
+  (e) => {
+    if (leftTouchStartX === null) return;
+
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - leftTouchStartX; // positive = swiped right
+    const deltaY = Math.abs(touch.clientY - leftTouchStartY);
+
+    // Ensure it's more horizontal than vertical (not a scroll) (and a bit more)
+    if (deltaX > swipeTreshold && deltaX > deltaY + deltaY * 0.65) {
+      toggleBurgerMenu();
+    }
+
+    leftTouchStartX = null;
+    leftTouchStartY = null;
   },
   { passive: true },
 );
