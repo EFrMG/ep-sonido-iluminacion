@@ -2,7 +2,8 @@
   min-height: min(70dvh, 900px);
   margin: var(--spacing-xl) var(--spacing-l) var(--spacing-xxl);
   padding: var(--spacing-ms) 0 0;
-  border: var(--border-width-m) solid var(--primary-500-shared);
+  border: var(--border-width-m) solid
+    color-mix(in hsl, var(--primary-500-shared) 50%, transparent 50%);
   border-radius: var(--radius-l);
   box-shadow: var(--inner-shadow-1);
 
@@ -37,7 +38,7 @@
   height: 2.3125em;
   width: 2.3125em;
   background-color: var(--primary-500-shared);
-  opacity: 0.8;
+  opacity: 0.72;
   transition:
     opacity var(--trs-s),
     scale var(--trs-s);
