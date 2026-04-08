@@ -64,9 +64,11 @@
 }
 
 .hero-motto {
-  font-family: var(--ff-italics);
-  font-size: var(--fz-xxl);
+  font-family:
+    Erode-VariableItalic, Erode-LightItalic, Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
+  font-size: var(--fz-xxl);
   margin-bottom: var(--spacing-m);
   animation: hero-fade-in var(--trs-out) 95ms both;
   color: var(--primary-500);
