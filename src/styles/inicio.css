@@ -1,14 +1,21 @@
+.hero-section-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-section {
   position: relative;
   isolation: isolate; /* Important for the "z-index: -1" later */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: var(--spacing-ms);
+  margin: 0 var(--spacing-s);
   padding: var(--spacing-xl) var(--spacing-l);
   text-align: center;
   background-blend-mode: hard-light;
   background-position: center;
+  max-width: 1550px;
+  flex-grow: 1;
   min-height: 65dvh;
   border-radius: var(--radius-xl);
   background:
@@ -121,7 +128,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-s);
-  padding: var(--spacing-m) calc(var(--spacing-l) - 0.38em) var(--spacing-m)
+  padding: var(--spacing-m) calc(var(--spacing-l) - 0.3em) var(--spacing-m)
     var(--spacing-l);
   background-color: var(--secondary-400);
   border: var(--border-width-m) solid var(--secondary-600);
@@ -168,7 +175,7 @@
   }
 
   & .icon {
-    translate: 0 0;
+    translate: 0 0.0325em;
     transition: translate var(--trs-s);
   }
 }
@@ -532,7 +539,6 @@
 
 @media screen and (max-width: 350px) {
   .hero-section {
-    margin: var(--spacing-s);
     padding: var(--spacing-l) var(--spacing-ml);
     border-radius: var(--radius-l);
 

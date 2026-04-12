@@ -694,7 +694,7 @@ label {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-s);
-  padding: var(--spacing-m) calc(var(--spacing-l) - 0.36em) var(--spacing-m)
+  padding: var(--spacing-m) calc(var(--spacing-l) - 0.25em) var(--spacing-m)
     var(--spacing-l);
   font-family: var(--ff-extra-bold);
   font-size: var(--fz-ml);
