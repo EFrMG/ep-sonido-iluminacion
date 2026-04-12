@@ -36,7 +36,7 @@
     width: min(100%, 90vw);
     margin-block-end: var(--spacing-ml);
     font-size: var(--fz-m);
-    border: var(--border-width-m) solid var(--secondary-500);
+    border: var(--border-width-m) solid var(--secondary-400);
     border-radius: var(--radius-m);
     background-color: var(--bkg-clr);
     padding: 0.5em 0.75em;

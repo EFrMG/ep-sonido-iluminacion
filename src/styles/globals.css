@@ -75,6 +75,7 @@
   --trs-out: 500ms cubic-bezier(0.5, 1, 0.89, 1);
   --trs-out-long: 900ms cubic-bezier(0.5, 1, 0.89, 1);
   --trs-out-longer: 1450ms cubic-bezier(0.5, 1, 0.89, 1);
+  --trs-out-longest: 2700ms cubic-bezier(0.5, 1, 0.89, 1);
   --trs-back-in: 500ms
     linear(
       0,

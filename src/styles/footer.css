@@ -339,13 +339,13 @@ body.light-theme #sistema-th {
     transform: translateX(0) scale(1);
   }
   25% {
-    transform: translateX(5px) scale(1.01);
+    transform: translateX(2px) scale(1.01);
   }
   50% {
-    transform: translateX(0) scale(1.025);
+    transform: translateX(0) scale(1.02);
   }
   75% {
-    transform: translateX(-5px) scale(1.01);
+    transform: translateX(-2px) scale(1.01);
   }
   100% {
     transform: translateX(0) scale(1);

@@ -3,6 +3,7 @@ import "./globals.js";
 import "../styles/galerias.css";
 
 const cardAnchor = document.querySelectorAll(".card-anchor");
+const cardHoverDelay = 1200;
 
 cardAnchor.forEach((cardAn) => {
   const card = cardAn.children[0];
@@ -17,7 +18,7 @@ cardAnchor.forEach((cardAn) => {
       setTimeout(() => {
         enteredEnough = true;
         leftEnough = false;
-      }, 2300);
+      }, cardHoverDelay);
     }
   });
 
@@ -29,7 +30,7 @@ cardAnchor.forEach((cardAn) => {
 
       setTimeout(() => {
         leftEnough = true;
-      }, 2300);
+      }, cardHoverDelay);
     }
   });
 });

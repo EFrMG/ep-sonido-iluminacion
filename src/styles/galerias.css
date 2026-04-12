@@ -51,7 +51,7 @@
 }
 
 .card-animated-hover {
-  animation: card-hover 1900ms 500ms
+  animation: card-hover 1100ms 200ms
     linear(
       0,
       -0.004 4.8%,
@@ -76,7 +76,7 @@
 }
 
 .card-animated-hover-reverse {
-  animation: card-hover-reverse 1900ms
+  animation: card-hover-reverse 1100ms
     linear(
       0,
       -0.004 4.8%,
@@ -122,7 +122,8 @@
     height: 300px;
     width: 100%;
     object-fit: cover;
-    border: var(--border-width-s) solid var(--primary-400);
+    border: var(--border-width-s) solid
+      color-mix(in hsl, var(--primary-400) 67%, transparent 33%);
     border-radius: 0 0 var(--radius-m) var(--radius-m);
   }
 }

@@ -70,9 +70,29 @@
   font-variation-settings: "wght" 500;
   font-size: var(--fz-xxl);
   margin-bottom: var(--spacing-m);
-  animation: hero-fade-in var(--trs-out) 95ms both;
   color: var(--primary-500);
   color: hsl(51, 88%, 88%);
+
+  & span,
+  & q::before,
+  & q::after {
+    display: inline-block;
+  }
+
+  & span:nth-child(1),
+  & q::before {
+    animation: hero-fade-in var(--trs-out) 120ms both;
+  }
+  & span:nth-child(2) {
+    animation: hero-fade-in var(--trs-out) 280ms both;
+  }
+  & span:nth-child(3) {
+    animation: hero-fade-in var(--trs-out) 550ms both;
+  }
+  & span:nth-child(4),
+  & q::after {
+    animation: hero-fade-in var(--trs-out) 700ms both;
+  }
 }
 
 .hero-description {
@@ -82,7 +102,7 @@
   letter-spacing: -0.015em;
   color: hsl(51deg 83% 58%);
   margin-block: var(--spacing-xl) var(--spacing-xl);
-  animation: hero-fade-in-sec var(--trs-out-long) 320ms both;
+  animation: hero-fade-in-sec var(--trs-out-longest) 130ms both;
 }
 
 .hero-cta-buttons {
@@ -128,7 +148,7 @@
   }
 
   .services-cta-button-wrapper:active & {
-    translate: 0 5px;
+    translate: 0 1.5px;
     scale: 1.03;
   }
 
@@ -559,27 +579,32 @@
 @keyframes hero-fade-in {
   from {
     opacity: 0.12;
-    scale: 0.5;
-    filter: blur(3px);
+    scale: 0.94;
+    filter: blur(5px);
+    translate: var(--spacing-xl) 0;
+    rotate: y -55deg;
   }
   to {
     opacity: 1;
     scale: 1;
     filter: blur(0px);
+    translate: 0 0;
+    rotate: 0;
   }
 }
 
 @keyframes hero-fade-in-sec {
-  from {
+  0% {
     opacity: 0;
-    scale: 0.5;
-    transform: rotateX(33deg) rotateY(19deg);
-    filter: blur(7px);
+    scale: 0.7;
+    filter: blur(24px);
   }
-  to {
+  66% {
+    opacity: 0.35;
+  }
+  100% {
     opacity: 1;
     scale: 1;
-    transform: rotateX(0deg) rotateY(0deg);
     filter: blur(0px);
   }
 }
