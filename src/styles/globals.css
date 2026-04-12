@@ -496,6 +496,10 @@ body {
   @media screen and (max-width: 900px) {
     padding-block-start: 7rem;
   }
+
+  @media screen and (max-width: 450px) {
+    padding-block-start: 6rem;
+  }
 }
 
 body.no-scroll {

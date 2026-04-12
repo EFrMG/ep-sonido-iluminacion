@@ -539,6 +539,7 @@
 
 @media screen and (max-width: 350px) {
   .hero-section {
+    margin: 0;
     padding: var(--spacing-l) var(--spacing-ml);
     border-radius: var(--radius-l);
 
