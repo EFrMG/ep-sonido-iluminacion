@@ -180,7 +180,7 @@
   justify-content: center;
   flex-wrap: wrap;
   position: absolute;
-  inset: auto auto 107% 10px;
+  inset: auto auto calc(100% + var(--spacing-m)) 10px;
   padding: 0.5ex 1.5ex 1.5ex;
   background-color: var(--secondary-101-shared);
   border: 1px solid var(--accent-300-shared);
@@ -320,7 +320,7 @@ body.light-theme #sistema-th {
 
 @media screen and (max-width: 400px) {
   .theme-fieldset {
-    inset: auto 10px 103% 10px;
+    inset: auto 10px calc(100% + var(--spacing-s)) 10px;
   }
 }
 

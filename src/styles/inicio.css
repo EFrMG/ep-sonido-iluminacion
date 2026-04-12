@@ -121,7 +121,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-s);
-  padding: var(--spacing-m) var(--spacing-l);
+  padding: var(--spacing-m) calc(var(--spacing-l) - 0.38em) var(--spacing-m)
+    var(--spacing-l);
   background-color: var(--secondary-400);
   border: var(--border-width-m) solid var(--secondary-600);
   border-radius: var(--radius-m);
@@ -430,7 +431,8 @@
   }
 
   .services-cta-button {
-    padding: var(--spacing-ms) var(--spacing-ml);
+    padding: var(--spacing-ms) calc(var(--spacing-ml) - 0.27em)
+      var(--spacing-ms) var(--spacing-ml);
     font-size: var(--fz-m);
   }
 
