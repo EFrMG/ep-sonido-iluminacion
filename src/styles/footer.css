@@ -318,7 +318,7 @@ body.light-theme #sistema-th {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .theme-fieldset {
     inset: auto 10px calc(100% + var(--spacing-s)) 10px;
   }

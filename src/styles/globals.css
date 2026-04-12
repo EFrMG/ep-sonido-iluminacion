@@ -843,6 +843,10 @@ label {
 }
 
 @media screen and (max-width: 450px) {
+  .main-whatsapp-anchor {
+    margin: 0 0.875rem 0.4375rem 0;
+  }
+
   .main-whatsapp-icon {
     height: 36px;
     width: 36px;
@@ -876,12 +880,6 @@ label {
 
   #services-under-hero-para {
     font-size: var(--fz-ms);
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .main-whatsapp-anchor {
-    margin: 0 0.875rem 0.4375rem 0;
   }
 }
 

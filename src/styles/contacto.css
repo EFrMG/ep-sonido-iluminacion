@@ -47,8 +47,8 @@
   }
 
   & :is(input, textarea, select):focus {
-    border-color: var(--primary-601-shared);
-    caret-color: var(--primary-601-shared);
+    border-color: var(--primary-400-shared);
+    caret-color: var(--primary-400-shared);
     outline: none;
   }
 
