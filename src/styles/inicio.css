@@ -364,7 +364,7 @@
 
 .canvas-wrapper {
   position: relative;
-  color: var(--primary-600-shared);
+  color: var(--primary-602-shared);
   width: fit-content;
   margin: 0 auto var(--spacing-m);
 
@@ -587,7 +587,7 @@
 
 @keyframes hero-fade-in {
   from {
-    opacity: 0.12;
+    opacity: 0;
     scale: 0.94;
     filter: blur(5px);
     translate: var(--spacing-xl) 0;

@@ -208,6 +208,7 @@
     --primary-500-shared: hsl(51, 89%, 50%);
     --primary-600-shared: hsl(51, 89%, 60%);
     --primary-601-shared: hsl(51, 88%, 59%);
+    --primary-602-shared: hsl(51, 89%, 60%);
     --primary-650-shared: hsl(51, 89%, 60%);
     --primary-700-shared: hsl(51, 90%, 70%);
     --accent-300-shared: hsl(288, 32%, 30%);
@@ -254,6 +255,7 @@
     --primary-500-shared: hsl(288, 32%, 50%);
     --primary-600-shared: hsl(288, 32%, 60%);
     --primary-601-shared: hsl(288, 45%, 45%);
+    --primary-602-shared: hsl(288, 33%, 48%);
     --primary-650-shared: hsl(51, 89%, 60%);
     --primary-700-shared: hsl(288, 34%, 35%);
     --accent-300-shared: hsl(288, 32%, 48%);
@@ -380,6 +382,7 @@ body.dark-theme {
   --primary-500-shared: hsl(51, 89%, 50%);
   --primary-600-shared: hsl(51, 89%, 60%);
   --primary-601-shared: hsl(51, 88%, 59%);
+  --primary-602-shared: hsl(51, 89%, 60%);
   --primary-650-shared: hsl(51, 89%, 60%);
   --primary-700-shared: hsl(51, 90%, 70%);
   --accent-300-shared: hsl(288, 32%, 30%);
@@ -422,6 +425,7 @@ body.light-theme {
   --primary-500-shared: hsl(288, 32%, 50%);
   --primary-600-shared: hsl(288, 32%, 60%);
   --primary-601-shared: hsl(288, 45%, 45%);
+  --primary-602-shared: hsl(288, 33%, 48%);
   --primary-650-shared: hsl(51, 89%, 60%);
   --primary-700-shared: hsl(288, 34%, 35%);
   --accent-300-shared: hsl(288, 32%, 48%);

@@ -86,12 +86,12 @@
   &:has(.gallery-anchor:focus-within) .gallery-menu {
     display: block;
     opacity: 1;
-    translate: 0;
+    translate: 1px 0;
     scale: 1 1;
 
     @starting-style {
       opacity: 0;
-      translate: 0 -1cap;
+      translate: 1px -1cap;
       scale: 1 0.95;
     }
   }
@@ -100,12 +100,12 @@
 .gallery-relative-menu:focus-within .gallery-menu {
   display: block;
   opacity: 1;
-  translate: 0;
+  translate: 1px 0;
   scale: 1 1;
 
   @starting-style {
     opacity: 0;
-    translate: 0 -1cap;
+    translate: 1px -1cap;
     scale: 1 0.95;
   }
 }
@@ -118,7 +118,7 @@
 .gallery-menu {
   display: none;
   opacity: 0;
-  translate: 0 -1cap;
+  translate: 1px -1cap;
   scale: 1 0.995;
   position: absolute;
   inset: 100% auto auto -10%;
@@ -130,7 +130,7 @@
     var(--secondary-150-shared-menu),
     var(--secondary-200)
   );
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-top: none;
   border-image: linear-gradient(
     141deg,
@@ -149,7 +149,7 @@
   &:hover {
     display: block;
     opacity: 1;
-    translate: 0;
+    translate: 1px 0;
     scale: 1 1;
   }
 
