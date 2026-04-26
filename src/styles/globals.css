@@ -777,6 +777,14 @@ label {
   font-family: var(--ff-medium);
 }
 
+.subtext {
+  opacity: 0.92;
+}
+
+.subsubtext {
+  opacity: 0.86;
+}
+
 @media screen and (max-width: 900px) {
   .about-cta-button {
     padding: var(--spacing-ms) calc(var(--spacing-ml) - 0.245em)
