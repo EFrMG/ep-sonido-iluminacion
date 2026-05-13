@@ -52,6 +52,10 @@
     outline: none;
   }
 
+  & textarea {
+    max-height: 10lh;
+  }
+
   & select {
     cursor: pointer;
   }
