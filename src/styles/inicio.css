@@ -239,7 +239,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-xl) var(--spacing-l) var(--spacing-l);
+  justify-content: space-around;
+  padding: var(--spacing-l);
   color: hsl(53, 31%, 95%);
   z-index: 3;
   transition: scale 369ms;
@@ -285,28 +286,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
-  margin-top: var(--spacing-l);
-}
-
-.about-us-icon {
-  height: 80px;
-  width: 80px;
-  margin-bottom: var(--spacing-m);
-  background-color: var(--primary-500);
+  margin-top: var(--spacing-xl);
 }
 
 .about-us-column:hover .columns-content-wrapper {
   transition: scale 963ms;
   scale: 1.03;
-}
-
-.about-us-icon[data-icon="quality"] {
-  /*Probably change this one*/
-  mask: url("/users.svg") center / contain no-repeat;
-}
-
-.about-us-icon[data-icon="experience"] {
-  mask: url("/tool.svg") center / contain no-repeat;
 }
 
 .about-us-column h4 {
