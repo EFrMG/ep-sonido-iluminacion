@@ -37,15 +37,35 @@ servicesCtaButton.forEach((el) => {
 const aboutUsColumns = document.querySelectorAll(".about-us-column");
 
 aboutUsColumns.forEach((column) => {
-  let mouseX = 0;
-  let mouseY = 0;
-  let gradientX1 = 270;
-  let gradientY1 = 270;
-  let gradientX2 = 270;
-  let gradientY2 = 270;
-  let gradientX3 = 270;
-  let gradientY3 = 270;
+  let mouseX,
+    mouseY,
+    gradientX1,
+    gradientY1,
+    gradientX2,
+    gradientY2,
+    gradientX3,
+    gradientY3;
   let animationFrameId = null;
+
+  const updateGradientCoordinates = () => {
+    column.style.setProperty("--mouse-x-1", `${gradientX1}px`);
+    column.style.setProperty("--mouse-y-1", `${gradientY1}px`);
+    column.style.setProperty("--mouse-x-2", `${gradientX2}px`);
+    column.style.setProperty("--mouse-y-2", `${gradientY2}px`);
+    column.style.setProperty("--mouse-x-3", `${gradientX3}px`);
+    column.style.setProperty("--mouse-y-3", `${gradientY3}px`);
+  };
+
+  const resetToCenter = () => {
+    const rect = column.getBoundingClientRect();
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    mouseX = gradientX1 = gradientX2 = gradientX3 = centerX;
+    mouseY = gradientY1 = gradientY2 = gradientY3 = centerY;
+    updateGradientCoordinates();
+  };
+
+  resetToCenter();
 
   const updateGradient = () => {
     const dx1 = mouseX - gradientX1;
@@ -62,12 +82,7 @@ aboutUsColumns.forEach((column) => {
     gradientX3 += dx3 * 0.09;
     gradientY3 += dy3 * 0.09;
 
-    column.style.setProperty("--mouse-x-1", `${gradientX1}px`);
-    column.style.setProperty("--mouse-y-1", `${gradientY1}px`);
-    column.style.setProperty("--mouse-x-2", `${gradientX2}px`);
-    column.style.setProperty("--mouse-y-2", `${gradientY2}px`);
-    column.style.setProperty("--mouse-x-3", `${gradientX3}px`);
-    column.style.setProperty("--mouse-y-3", `${gradientY3}px`);
+    updateGradientCoordinates();
 
     if (Math.abs(dx1) > 1 || Math.abs(dy1) > 1) {
       animationFrameId = requestAnimationFrame(updateGradient);
@@ -78,6 +93,7 @@ aboutUsColumns.forEach((column) => {
   };
 
   column.addEventListener("mouseenter", () => {
+    resetToCenter();
     if (!animationFrameId) {
       animationFrameId = requestAnimationFrame(updateGradient);
     }
