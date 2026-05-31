@@ -5,7 +5,7 @@
 .service-card-wrapper {
   height: fit-content;
   width: fit-content;
-  margin-block: var(--spacing-l);
+  margin-block: var(--spacing-xl);
 
   &:hover .service-card {
     box-shadow: var(--shadow-3);
@@ -26,6 +26,14 @@
     &[data-service="live"] .service-card-icon {
       background-position: 100%;
     }
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin-block: var(--spacing-l);
+  }
+
+  @media only screen and (max-width: 350px) {
+    margin-block: var(--spacing-m);
   }
 }
 
