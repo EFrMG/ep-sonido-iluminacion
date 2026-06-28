@@ -75,12 +75,12 @@ aboutUsColumns.forEach((column) => {
     const dx3 = mouseX - gradientX3;
     const dy3 = mouseY - gradientY3;
 
-    gradientX1 += dx1 * 0.03;
-    gradientY1 += dy1 * 0.03;
-    gradientX2 += dx2 * 0.06;
-    gradientY2 += dy2 * 0.06;
-    gradientX3 += dx3 * 0.09;
-    gradientY3 += dy3 * 0.09;
+    gradientX1 += dx1 * 0.05;
+    gradientY1 += dy1 * 0.05;
+    gradientX2 += dx2 * 0.1;
+    gradientY2 += dy2 * 0.1;
+    gradientX3 += dx3 * 0.15;
+    gradientY3 += dy3 * 0.15;
 
     updateGradientCoordinates();
 

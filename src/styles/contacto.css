@@ -54,6 +54,7 @@
 
   & textarea {
     max-height: 10lh;
+    transition: height 140ms linear;
   }
 
   & select {
@@ -459,7 +460,6 @@
   border: none;
   border-radius: var(--radius-m) 0 var(--radius-m) var(--radius-m);
   outline: var(--border-width-m) solid var(--secondary-300);
-  box-shadow: var(--inner-shadow-1);
   font-size: var(--fz-l);
   line-height: 1;
   background-color: var(--secondary-100);
