@@ -108,6 +108,18 @@
     transition:
       scale var(--trs-m),
       opacity var(--trs-s);
+    z-index: 3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--secondary-100), transparent 35%);
+    background-size: 100% 220%;
+    background-position: 50% 50%;
+    transition: background-position var(--trs-l) 630ms;
+    z-index: 2;
   }
 
   &:hover {
@@ -120,27 +132,42 @@
       opacity: 1;
     }
 
+    &::after {
+      background-position: 50% 0%;
+    }
+
     & .feature-card-icon {
-      scale: 1.125;
-      rotate: 2.75deg;
-      translate: 21% 0;
+      scale: 1.7;
+      rotate: 0deg;
+      opacity: 0.24;
+      translate: 50% 23%;
       background-color: var(--accent-600);
+    }
+
+    & .feature-card-title {
+      opacity: 1;
     }
   }
 }
 
 .feature-card-icon {
-  position: relative;
-  height: 64px;
-  width: 64px;
-  margin-inline-start: var(--spacing-ms);
+  position: absolute;
+  inset: var(--spacing-l) auto auto var(--spacing-l);
+  height: 148px;
+  width: 148px;
+  scale: 1.2;
   border-radius: var(--radius-m);
   background-color: var(--secondary-500);
+  opacity: 0.28;
+  translate: 50% 100%;
+  rotate: 5deg;
   transition:
-    scale var(--trs-s),
+    scale var(--trs-l) 230ms,
     rotate var(--trs-l),
-    translate var(--trs-l),
-    background-color var(--trs-l);
+    translate var(--trs-l) 230ms,
+    background-color var(--trs-l),
+    opacity var(--trs-l);
+  z-index: 1;
 
   &.advice {
     mask: url("/phone.svg") center / contain no-repeat;
@@ -156,18 +183,42 @@
 }
 
 .feature-card-title {
+  position: relative;
   font-size: var(--fz-l);
   color: var(--primary-900);
-  margin-block-end: var(--spacing-m);
+  margin-block: 0 var(--spacing-m);
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
   font-weight: 600;
   font-variation-settings: "wght" 600;
+  opacity: 0.86;
+  transition: opacity var(--trs-l) 720ms;
+  z-index: 3;
 }
 
 .feature-card-description {
+  position: relative;
   font-size: var(--fz-ml);
+  z-index: 3;
 }
 
 @media only screen and (max-width: 900px) {
+  .feature-card {
+    &:hover {
+      & .feature-card-icon {
+        scale: 1.65;
+        translate: 50% 42%;
+      }
+    }
+  }
+
+  .feature-card-icon {
+    height: 124px;
+    width: 124px;
+    translate: 50% 65%;
+  }
+
   .about-hero-subtitle {
     font-size: var(--fz-l);
   }
@@ -185,6 +236,21 @@
 @media screen and (max-width: 500px) {
   .about-hero {
     margin: 0 auto var(--spacing-ml) auto;
+  }
+
+  .feature-card {
+    &:hover {
+      & .feature-card-icon {
+        scale: 1.6;
+        translate: 50% 48%;
+      }
+    }
+  }
+
+  .feature-card-icon {
+    height: 98px;
+    width: 98px;
+    translate: 50% 135%;
   }
 }
 
