@@ -1,7 +1,7 @@
 import "../styles/styles.css";
 import "./globals.js";
 import "../styles/inicio.css";
-import texture_1 from "../assets/images/texture_1.webp";
+
 import harp_08 from "../assets/audios/harp_08.mp3";
 import harp_13 from "../assets/audios/harp_13.mp3";
 
@@ -13,14 +13,31 @@ aboutCtaButtonHandling();
 const heroSection = document.querySelector(".hero-section");
 const tempImg = new Image();
 
-tempImg.src = texture_1;
+async function lqpiSwap() {
+  const isMobile = window.matchMedia("(max-width: 500px)");
+
+  try {
+    if (isMobile.matches) {
+      const imgSrcModule = await import("../assets/images/LQ-texture_1.webp");
+      tempImg.src = imgSrcModule.default;
+    } else {
+      const imgSrcModule = await import("../assets/images/texture_1.webp");
+      tempImg.src = imgSrcModule.default;
+    }
+  } catch {
+    console.error("Failed to load Hero image.");
+  }
+}
+
+lqpiSwap();
+
 tempImg.onload = () => {
   heroSection.classList.add("loaded");
 };
 
+// "Shine" button differential animation
 const servicesCtaButton = document.querySelectorAll(".services-cta-button");
 
-// "Shine" button differential animation
 servicesCtaButton.forEach((el) => {
   el.addEventListener("mouseenter", () => {
     el.classList.remove("shin-e-mated-reverse");

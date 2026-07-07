@@ -26,7 +26,7 @@
       hsla(224, 33%, 10%, 0.8) 70%,
       hsl(222, 33%, 10%) 100%
     ),
-    center / cover no-repeat url("../assets/images/LQ-texture_1.webp");
+    center / cover no-repeat url("../assets/images/LQPI-texture_1.webp");
 
   /* High-quality image fade-in layer */
   &::before {
@@ -36,17 +36,31 @@
     z-index: -1; /* Behind content, in front of background */
     border-radius: inherit;
     background-blend-mode: hard-light;
-    background:
-      radial-gradient(
-        ellipse at 50% 50%,
-        hsla(224, 33%, 40%, 0.69) 0%,
-        hsla(224, 33%, 30%, 0.75) 35%,
-        hsla(224, 33%, 10%, 0.8) 70%,
-        hsl(222, 33%, 10%) 100%
-      ),
-      center / cover no-repeat url("../assets/images/texture_1.webp");
     opacity: 0;
     transition: opacity var(--trs-out-long);
+
+    @media only screen and (max-width: 500px) {
+      background:
+        radial-gradient(
+          ellipse at 50% 50%,
+          hsla(224, 33%, 40%, 0.69) 0%,
+          hsla(224, 33%, 30%, 0.75) 35%,
+          hsla(224, 33%, 10%, 0.8) 70%,
+          hsl(222, 33%, 10%) 100%
+        ),
+        center / cover no-repeat url("../assets/images/LQ-texture_1.webp");
+    }
+    @media only screen and (min-width: 500px) {
+      background:
+        radial-gradient(
+          ellipse at 50% 50%,
+          hsla(224, 33%, 40%, 0.69) 0%,
+          hsla(224, 33%, 30%, 0.75) 35%,
+          hsla(224, 33%, 10%, 0.8) 70%,
+          hsl(222, 33%, 10%) 100%
+        ),
+        center / cover no-repeat url("../assets/images/texture_1.webp");
+    }
   }
 
   &.loaded::before {
@@ -573,7 +587,7 @@
 @keyframes hero-fade-in {
   from {
     opacity: 0;
-    scale: 0.94;
+    scale: 1.28 0.92;
     filter: blur(5px);
     translate: var(--spacing-xl) 0;
     rotate: y -55deg;
