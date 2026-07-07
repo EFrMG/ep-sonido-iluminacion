@@ -3,7 +3,7 @@ import "./globals.js";
 import "../styles/galerias.css";
 
 const cardAnchor = document.querySelectorAll(".card-anchor");
-const cardHoverDelay = 1200;
+const cardHoverDelay = 800;
 
 cardAnchor.forEach((cardAn) => {
   const card = cardAn.children[0];

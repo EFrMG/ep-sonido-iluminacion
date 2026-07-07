@@ -8,7 +8,8 @@
 }
 
 .card-anchor:active .gallery-card {
-  translate: 0 5px;
+  translate: 0 3.5px;
+  scale: 0.993;
 }
 
 .gallery-card {
@@ -47,11 +48,13 @@
   border: 3px double var(--primary-500);
   border-radius: var(--radius-m);
   box-shadow: var(--inner-shadow-1);
-  transition: translate var(--trs-back-in-out-short);
+  transition:
+    translate var(--trs-back-in-out-short),
+    scale var(--trs-back-in-out-short);
 }
 
 .card-animated-hover {
-  animation: card-hover 1100ms 200ms
+  animation: card-hover 800ms 100ms
     linear(
       0,
       -0.004 4.8%,
@@ -76,7 +79,7 @@
 }
 
 .card-animated-hover-reverse {
-  animation: card-hover-reverse 1100ms
+  animation: card-hover-reverse 800ms
     linear(
       0,
       -0.004 4.8%,
@@ -139,19 +142,19 @@
     transform: perspective(450px) scale(1) rotateX(0deg);
   }
   33% {
-    transform: perspective(450px) scale(1.03) rotateX(-1deg);
+    transform: perspective(450px) scale(1.015) rotateX(-0.75deg);
   }
   100% {
-    transform: perspective(450px) scale(1.017) rotateX(2.5deg);
+    transform: perspective(450px) scale(1.02) rotateX(1.75deg);
   }
 }
 
 @keyframes card-hover-reverse {
   0% {
-    transform: perspective(450px) scale(1.017) rotateX(2.5deg);
+    transform: perspective(450px) scale(1.02) rotateX(1.75deg);
   }
   66% {
-    transform: perspective(450px) scale(1.03) rotateX(-1deg);
+    transform: perspective(450px) scale(1.015) rotateX(-0.75deg);
   }
   100% {
     transform: perspective(450px) scale(1) rotateX(0deg);
