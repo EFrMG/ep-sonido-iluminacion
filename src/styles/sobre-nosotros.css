@@ -140,7 +140,7 @@
       scale: 1.7;
       rotate: 0deg;
       opacity: 0.24;
-      translate: 50% 23%;
+      translate: -50% -65%;
       background-color: var(--accent-600);
     }
 
@@ -152,14 +152,14 @@
 
 .feature-card-icon {
   position: absolute;
-  inset: var(--spacing-l) auto auto var(--spacing-l);
+  inset: 50% auto auto 50%;
   height: 148px;
   width: 148px;
   scale: 1.2;
   border-radius: var(--radius-m);
   background-color: var(--secondary-500);
   opacity: 0.28;
-  translate: 50% 100%;
+  translate: -50% -35%;
   rotate: 5deg;
   transition:
     scale var(--trs-l) 230ms,
@@ -208,7 +208,6 @@
     &:hover {
       & .feature-card-icon {
         scale: 1.65;
-        translate: 50% 42%;
       }
     }
   }
@@ -216,7 +215,6 @@
   .feature-card-icon {
     height: 124px;
     width: 124px;
-    translate: 50% 65%;
   }
 
   .about-hero-subtitle {
@@ -242,7 +240,6 @@
     &:hover {
       & .feature-card-icon {
         scale: 1.6;
-        translate: 50% 48%;
       }
     }
   }
@@ -250,7 +247,6 @@
   .feature-card-icon {
     height: 98px;
     width: 98px;
-    translate: 50% 135%;
   }
 }
 
