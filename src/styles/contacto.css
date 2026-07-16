@@ -85,7 +85,11 @@
 
 .and-or-para.yellow {
   color: var(--primary-601-shared);
-  text-decoration-color: var(--primary-601-shared);
+  text-decoration-color: color-mix(
+    in hsl,
+    var(--primary-601-shared) 30%,
+    transparent 70%
+  );
 }
 
 .contact-important-fieldset {
@@ -367,7 +371,7 @@
   background-color: var(--secondary-150);
   border-color: var(--primary-500);
   border-radius: var(--radius-m);
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-3);
   translate: -35vw 0;
   opacity: 0;
   transition:
@@ -436,7 +440,7 @@
 
   @starting-style {
     opacity: 0;
-    translation: 0 2.25rem;
+    translate: 0 2.25rem;
   }
 }
 

@@ -293,7 +293,7 @@
                 autocomplete="email"
                 maxlength="120"
               />
-              <p class="and-or-para">y / o</p>
+              <p id="and-or-para" class="and-or-para">y / o</p>
               <label for="phone">Número de teléfono:</label>
               <input type="tel" id="phone" name="Teléfono" maxlength="50" />
 
@@ -389,7 +389,11 @@
 
             <div class="form-buttons-wrapper">
               <!-- From Uiverse.io by cssbuttons-io -->
-              <button id="extra-button" class="form-button extra fv-button">
+              <button
+                type="button"
+                id="extra-button"
+                class="form-button extra fv-button"
+              >
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front text"> Información extra </span>
@@ -410,7 +414,9 @@
           </form>
 
           <dialog id="form-modal" class="form-modal" closedby="any">
-            <button id="form-modal-button" autofocus>&times;</button>
+            <button id="form-modal-button" aria-label="Cerrar" autofocus>
+              &times;
+            </button>
             <p>Sus datos se han enviado correctamente. Muchas gracias.</p>
           </dialog>
 
@@ -426,7 +432,14 @@
               action="https://formspree.io/f/myzbrazq"
               method="post"
             >
-              <button id="close-dev-modal-button" autofocus>&times;</button>
+              <button
+                id="close-dev-modal-button"
+                type="button"
+                aria-label="Cerrar"
+                autofocus
+              >
+                &times;
+              </button>
 
               <p class="dev-notice-para">
                 Formulario para contactar al
@@ -485,7 +498,9 @@
           </dialog>
 
           <dialog id="dev-form-modal" class="form-modal" closedby="any">
-            <button id="dev-form-modal-button" autofocus>&times;</button>
+            <button id="dev-form-modal-button" aria-label="Cerrar" autofocus>
+              &times;
+            </button>
             <p>
               Gracias por contactarme. Le responderé a la mayor brevedad
               posible.
